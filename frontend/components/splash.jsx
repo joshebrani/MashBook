@@ -7,14 +7,13 @@ class Splash extends React.Component {
     render() {
         return (
             <div>
-                <header>
-                    <div className='title'>
-                        <h1>MashBook</h1>
-                        <p>Connect with friends and the world around you on Mashbook</p>
+                <header className='splash'>
+                    <div>
+                        <h1 className='title'>MashBook</h1>
+                        <p className='desc'>Connect with friends and the world around you on Mashbook</p>
                     </div>
                     <LoginFormContainer/>
-                    <button>Create New Account</button>
-                    <SignupFormContainer/>
+                    {/* <SignupFormContainer/> */}
                 </header>
             </div>
         )
