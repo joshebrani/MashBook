@@ -2,12 +2,13 @@ import React from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
 
 
-const App = () => {
-    return(
-        <div>
-            <h1>WE ARE LIVE</h1>
-        </div>
-    )
-}
+const App = () => (
+
+    <div>
+        <header>
+            <h1>MashBook Inc.</h1>
+        </header>
+    </div>
+)
 
 export default App
