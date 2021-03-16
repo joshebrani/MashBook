@@ -46,7 +46,7 @@ export const login = user => dispatch => (
 );
 
 export const logout = () => dispatch => (
-    logoutUser().then(user => (
+    logoutUser().then(() => (
         dispatch(logoutCurrentUser())
     ))
 );

@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+    protect_from_forgery with: :null_session
+
     helper_method :logged_in?, :current_user
 
     def current_user
@@ -7,9 +9,10 @@ class ApplicationController < ActionController::Base
     end
 
     def require_logged_in
-        unless current_user
-            render json: {base: ['invalid credentials']}, status: 401
+        unless logged_in?
+            render json: { base: ["Invalid credentials"]}, status: 401
         end
+        # redirect_to api_session_url unless logged_in?
     end
 
     def logged_in?

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
+import Splash from './splash'
 
 
 const App = () => (
 
     <div>
         <header>
-            <h1>MashBook Inc.</h1>
+            <Splash/>
         </header>
     </div>
 )

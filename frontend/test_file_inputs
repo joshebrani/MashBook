@@ -1,0 +1,4 @@
+user = {
+    email: 'josh@abc.com', password: 'password', fname: 'josh', lname: 'ebrani', birthday: '7/10/1997',
+    bio: 'my website', city: 'NY', work: 'unemployed', school: 'AA', gender: 'Male'
+    }
