@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.login = login;
     window.logout = logout;
 
-    window.signupUser = signupUser
-    window.loginUser = loginUser
-    window.logoutUser = logoutUser
+    window.signupUser = signupUser;
+    window.loginUser = loginUser;
+    window.logoutUser = logoutUser;
 
     // Done
 

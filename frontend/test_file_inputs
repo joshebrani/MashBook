@@ -2,3 +2,7 @@ user = {
     email: 'josh@abc.com', password: 'password', fname: 'josh', lname: 'ebrani', birthday: '7/10/1997',
     bio: 'my website', city: 'NY', work: 'unemployed', school: 'AA', gender: 'Male'
     }
+
+demo = User.create({ email: 'demouser@aol.com', password: 'password', fname: 'Demo', 
+    lname: 'Person', birthday: '1/1/1995', bio: 'Enjoying life', city: 'NY', 
+    work: 'Astronaut', school: 'Harvard', gender: 'Male'})
