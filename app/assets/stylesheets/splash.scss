@@ -102,30 +102,86 @@
 }
 
 
+
+// SIGNUP
+
 .modal-background {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
   z-index: 10;
 }
 
 .modal-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 80px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    left: 50%;
+    right: 50%;
 }
 
 .signup-form {
     width: 432px;
-    background-color: white;
     box-shadow: 3px 3px 8px 2px #cecccc;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.fullname {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.text input{
+    // width: 94%;
+    background-color: #d3d3d338;
     border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 16px;
+    font-family: sans-serif;
+}
+
+.oneline input {
+    margin-bottom: 15px;
+    margin-right: 10px;
+    width: 94%;
+}
+
+.sign-head {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.su {
+    font-size: 32px;
+    font-family: sans-serif;;
+    font-weight: bold;
+}
+
+.easy {
+    color: #606770;
+    font-family: sans-serif;;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.footer {
+    color: #777;
+    font-size: 11px;
+}
+
+.bday, .gender, .footer {
+    margin-bottom: 15px;
 }
