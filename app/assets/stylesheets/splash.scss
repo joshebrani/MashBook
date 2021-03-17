@@ -185,3 +185,11 @@
 .bday, .gender, .footer {
     margin-bottom: 15px;
 }
+
+.close {
+    position: absolute;
+    right: -200px;
+    width: 25px;
+    font-size: 25px;
+    margin-top: -15px;
+}
