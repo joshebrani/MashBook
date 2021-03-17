@@ -28,8 +28,8 @@ class Signup extends React.Component {
 
     render() {
         return (
-          <section className="Modal">
-            <form>
+          <section className="modal-background">
+            <form className='modal-child' className='signup-form'>
               <h1>Sign Up</h1>
               <p>It's quick and easy.</p>
 

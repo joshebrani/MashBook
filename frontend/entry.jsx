@@ -9,6 +9,14 @@ import { signupUser, loginUser, logoutUser } from './util/session_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
+    let preloadedState = undefined;
+    if (window.currentUser) {
+        preloadedState = {
+            sessions: {
+                currentUser: window.currentUser
+            }
+        }
+    }
     const store = configureStore()
 
     // Testing Testing 1 2 3

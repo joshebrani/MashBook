@@ -35,6 +35,7 @@
     padding: 15px;
     margin-bottom: 10px;
     outline: none;
+    font-size: 17px;
 }
 
 .blue {
@@ -89,4 +90,42 @@
     justify-content: space-around;
     padding: 50px;
     height: 500px;
+}
+
+.error-login {
+    color: #f02849;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 8px;
+    text-align: left;
+}
+
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.signup-form {
+    width: 432px;
+    background-color: white;
+    box-shadow: 3px 3px 8px 2px #cecccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
 }
