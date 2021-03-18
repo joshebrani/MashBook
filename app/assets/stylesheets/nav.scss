@@ -2,14 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: rgb(255, 253, 253);
-    margin-top: 10px;
+    background: white;    
+    padding-top: 10px;
+    border: 1px solid rgb(230, 228, 228);
 }
 
-.nav-top .m-icon {
-    width: 50;
-    height: 50;
-}
 
 .nav-top img {
     width: 20px;
@@ -20,6 +17,7 @@
     width: 40px;
     height: 40px;
     margin-right: 50px;
+    margin-left: 20px;
 }
 
 .h-v-g img{
@@ -32,6 +30,31 @@
 
 
 .nav-top img:hover {
+    cursor: pointer;
+    background: rgb(230, 228, 228);
+}
+
+.nav-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(240, 239, 239);
+    height: 1000px;
+}
+
+.nav-side img {
+    width: 30px;
+    height: 30px;
+    padding-top: 50px ;
+    margin-left: 10px;
+}
+
+.nav-side p {
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.nav-side img:hover {
     cursor: pointer;
     background: rgb(230, 228, 228);
 }
