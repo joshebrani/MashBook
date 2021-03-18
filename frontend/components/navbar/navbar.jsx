@@ -40,12 +40,17 @@ class NavBar extends React.Component {
         <div className="nav-side">
           {/* <p>profile</p> */}
           <p>
-            <img className="linkedin-icon" src={window.linkedin} alt="" />{" "}
-            Linkedin
+            <a href="https://www.linkedin.com/in/joshuaebrani/">
+              <img className="linkedin-icon" src={window.linkedin} alt="" />{" "}
+              Linkedin
+            </a>
           </p>
           <p>
+          <a href="https://github.com/joshebrani">
             <img className="github-icon" src={window.github} alt="" /> Github
+          </a>
           </p>
+          
           <p>3</p>
           <p>4</p>
           <p>5</p>
