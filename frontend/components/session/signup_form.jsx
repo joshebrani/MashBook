@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from "react-router-dom";
 // import { Link } from 'react-router-dom'
 
 class Signup extends React.Component {
@@ -122,7 +123,15 @@ class Signup extends React.Component {
               Cookies Policy. You may receive SMS Notifications from us and can
               opt out any time.
             </p>
-            <button onClick={this.handleSubmit} className="new">
+            <button
+            // onClick={() => {
+            //     {this.handleSubmit};
+            //     {() => this.props.closeModal()};
+            // }}
+              onClick={this.handleSubmit}
+            //   onClick={() => this.props.closeModal()}
+              className="new"
+            >
               Sign Up
             </button>
           </div>
@@ -133,4 +142,4 @@ class Signup extends React.Component {
 }
 
 
-export default Signup;
+export default withRouter(Signup);
