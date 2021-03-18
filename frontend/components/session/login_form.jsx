@@ -14,6 +14,7 @@ class Login extends React.Component {
       password: "",
     };
     
+    this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
     // this.openModal = this.openModal.bind(this)
@@ -29,13 +30,13 @@ class Login extends React.Component {
   
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state)
+    this.props.login(this.state).then(() => this.props.history.push("/feed"));
   }
   
   handleDemo(e) {
     e.preventDefault();
     const demo = { email: "demouser@aol.com", password: "password" };
-    this.props.login(demo)
+    this.props.login(demo).then(() => this.props.history.push("/feed"));
   }
 
   // openModal(e) {

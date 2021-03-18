@@ -107,7 +107,7 @@
 
 .modal-background {
   position: fixed;
-  background: rgba(233, 232, 232, 0.7);
+  background: rgba(243, 242, 242, 0.158);
   top: 0;
   bottom: 0;
   right: 0;
@@ -198,4 +198,15 @@
 
 .close:hover {
     cursor: pointer;
+}
+
+.splash-footer {
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.splash-footer p, a {
+    margin-right: 20px;
 }

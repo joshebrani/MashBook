@@ -5,9 +5,9 @@ import { openModal, closeModal } from "../../actions/modal_actions";
 
 
 
-const mstp = ({ errors }) => {
+const mstp = (state, OwnProps) => {
     return {
-        errors: errors.session 
+        errors: state.errors.session 
     }
 }
 
