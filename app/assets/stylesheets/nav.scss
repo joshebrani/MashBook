@@ -1,0 +1,37 @@
+.nav-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(255, 253, 253);
+    margin-top: 10px;
+}
+
+.nav-top .m-icon {
+    width: 50;
+    height: 50;
+}
+
+.nav-top img {
+    width: 20px;
+    height: 20px;
+}
+
+.m-s img {
+    width: 40px;
+    height: 40px;
+    margin-right: 50px;
+}
+
+.h-v-g img{
+    margin-left: 50px;
+}
+
+.m-b-d img{
+    margin-right: 50px;
+}
+
+
+.nav-top img:hover {
+    cursor: pointer;
+    background: rgb(230, 228, 228);
+}

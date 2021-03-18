@@ -16,11 +16,25 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <div className="nav-top">
-        <button>
-          <img className="bell-icon" src={window.bell} alt="" />{" "}
-        </button>
-        <button onClick={this.logout}>Log Out</button>
+        <div className="nav-top">
+
+        <div className='m-s'>
+        <img className="m-icon" src={window.m} alt="" />{" "}
+        <img className="search-icon" src={window.search} alt="" />{" "}
+        </div>
+
+        <div className='h-v-g'>
+        <img className="home-icon" src={window.home} alt="" />{" "}
+        <img className="video-icon" src={window.video} alt="" />{" "}
+        <img className="group-icon" src={window.group} alt="" />{" "}
+        </div>
+
+        <div className='m-b-d'>
+        <img className="messages-icon" src={window.messages} alt="" />{" "}
+        <img className="bell-icon" src={window.bell} alt="" />{" "}
+        <img className="down-icon" src={window.down} alt="" />{" "}
+        </div>
+        {/* <button onClick={this.logout}>Log Out</button> */}
       </div>
     );
   }
