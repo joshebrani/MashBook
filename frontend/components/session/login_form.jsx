@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
+// import Modal from 'react-modal';
+import SignupFormContainer from './signup_form_container'
+
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
-  
+    
     this.state = {
       email: "",
       password: "",
     };
-
+    
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
-
+    // this.openModal = this.openModal.bind(this)
+    
   }
   handleInput(type) {
     return (e) =>{
@@ -21,25 +26,30 @@ class Login extends React.Component {
       })
     }
   }
-
+  
   handleSubmit(e) {
     e.preventDefault();
-    debugger
-    this.props.login(this.state);
+    this.props.login(this.state)
   }
   
   handleDemo(e) {
     e.preventDefault();
-    const demo = {email: "demouser@aol.com", password: "password"}
-    this.props.login(demo);
+    const demo = { email: "demouser@aol.com", password: "password" };
+    this.props.login(demo)
   }
 
+  // openModal(e) {
+  //   e.preventDefault()
+  //   this.props.openModal(<SignupFormContainer/>)
+  // }
+  
   render() {
+    // const [setModalIsOpen]  = useState(false);
     let errormessage
     if (this.props.errors) {
       errormessage = this.props.errors;
     }
-      return (
+    return (
         <div>
           <form className="login">
             <div className="ep">
@@ -68,12 +78,17 @@ class Login extends React.Component {
 
             <div className="border"></div>
 
-            <Link className="new" to="/signup">Create New Account</Link>
-
+            {/* <button onClick={() => setModalIsOpen(true)} className='new'>Create New Account</button>
+              <Modal isOpen={true}>
+                  <SignupFormContainer/>
+              </Modal> */}
+            {/* <Link className="new" to="/signup">Create New Account</Link> */}
+            <button className='new' onClick= {()=>(this.props.openModal('signup'))}>Create New Account</button>
+              {/* <SignupFormContainer/> */}
           </form>
         </div>
       );
   }
 }
 
-export default Login;
+export default withRouter(Login);

@@ -107,6 +107,7 @@
 
 .modal-background {
   position: fixed;
+  background: rgba(233, 232, 232, 0.7);
   top: 0;
   bottom: 0;
   right: 0;
@@ -133,6 +134,7 @@
     align-items: center;
     padding: 16px;
     box-sizing: border-box;
+    background: white;
 }
 
 .fullname {
@@ -192,4 +194,8 @@
     width: 25px;
     font-size: 25px;
     margin-top: -15px;
+}
+
+.close:hover {
+    cursor: pointer;
 }

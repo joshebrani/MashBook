@@ -1,17 +1,22 @@
 import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 import Login from './login_form';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mstp = ({ errors }) => {
+const mstp = (state, OwnProps) => {
     return {
-        errors: errors.session
+        errors: state.errors.session,
+        openModal: state.ui.modal,
+        formType: 'login'
     }
 }
 
 const mdtp = dispatch => {
     return {
-        login: (user) => dispatch(login(user))
+        login: (user) => dispatch(login(user)),
+        openModal: (modal) => dispatch(openModal(modal)),
+        closeModal: () => dispatch(closeModal(modal))
     }
 }
 
-export default connect(mstp, mdtp)(Login);
+export default connect(mstp, mdtp)(Login)

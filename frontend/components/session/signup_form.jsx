@@ -33,9 +33,12 @@ class Signup extends React.Component {
             <form className="modal-child">
               <div className="signup-form">
                 <div className="sign-head">
-                  <Link className="close" to="/">
+                  <div
+                    className="close"
+                    onClick={() => this.props.closeModal()}
+                  >
                     &times;
-                  </Link>
+                  </div>
                   <h1 className="su">Sign Up</h1>
                   <p className="easy">It's quick and easy.</p>
                 </div>
