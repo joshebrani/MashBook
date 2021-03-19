@@ -3,13 +3,15 @@
 # Table name: posts
 #
 #  id             :bigint           not null, primary key
-#  body           :text
-#  post_author_id :integer
-#  wall_id        :text
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  body           :text             not null
+#  post_author_id :integer          not null
+#  wall_id        :integer          not null
 #
 class Post < ApplicationRecord
+
+    validates :body, :post_author_id, :wall_id, presence: true
 
     belongs_to :wall,
         foreign_key: :wall_id,

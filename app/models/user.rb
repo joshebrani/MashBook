@@ -29,12 +29,12 @@ class User < ApplicationRecord
 
 
 
-    
+
     has_many :posts,
         foreign_key: :post_author_id,
         class_name: :Post
 
-    has_many :received:posts,
+    has_many :received_posts,
         foreign_key: :wall_id,
         class_name: :Post
 
