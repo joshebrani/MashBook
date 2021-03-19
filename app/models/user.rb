@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  fname           :string           not null
+#  lname           :string           not null
+#  birthday        :string           not null
+#  bio             :string
+#  city            :string
+#  work            :string
+#  school          :string
+#  gender          :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 class User < ApplicationRecord
 
     validates :email, :password_digest, :session_token, :fname, :lname, :birthday, presence: true
@@ -7,6 +26,18 @@ class User < ApplicationRecord
     attr_reader :password
 
     before_validation :ensure_session_token
+
+
+
+    
+    has_many :posts,
+        foreign_key: :post_author_id,
+        class_name: :Post
+
+    has_many :received:posts,
+        foreign_key: :wall_id,
+        class_name: :Post
+
 
 
     def self.find_by_credentials(email, password)

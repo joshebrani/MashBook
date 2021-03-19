@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id             :bigint           not null, primary key
+#  body           :text
+#  post_author_id :integer
+#  wall_id        :text
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+one:
+  body: MyText
+  post_author_id: 1
+  wall_id: MyText
+
+two:
+  body: MyText
+  post_author_id: 1
+  wall_id: MyText
