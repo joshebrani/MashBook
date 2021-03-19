@@ -18,6 +18,11 @@ class Signup extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
@@ -30,9 +35,9 @@ class Signup extends React.Component {
   }
 
   render() {
-    let errormessage;
-    if (this.props.errors) {
-      errormessage = this.props.errors;
+    let errormessage = [];
+    if (this.props.errors.signup) {
+      errormessage = this.props.errors.signup;
     }
     return (
       <section className="modal-background">
@@ -45,7 +50,7 @@ class Signup extends React.Component {
               <h1 className="su">Sign Up</h1>
               <p className="easy">It's quick and easy.</p>
             </div>
-            <p className="error-login">{errormessage.join(", ")}</p>
+            <p className="error-login">{errormessage}</p>
             <div className="text">
               <div className="fullname">
                 <input
@@ -124,12 +129,12 @@ class Signup extends React.Component {
               opt out any time.
             </p>
             <button
-            // onClick={() => {
-            //     {this.handleSubmit};
-            //     {() => this.props.closeModal()};
-            // }}
+              // onClick={() => {
+              //     {this.handleSubmit};
+              //     {() => this.props.closeModal()};
+              // }}
               onClick={this.handleSubmit}
-            //   onClick={() => this.props.closeModal()}
+              //   onClick={() => this.props.closeModal()}
               className="new"
             >
               Sign Up

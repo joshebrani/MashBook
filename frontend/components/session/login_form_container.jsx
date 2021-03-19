@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { login } from '../../actions/session_actions';
+import { login, clearErrors } from '../../actions/session_actions';
 import Login from './login_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
@@ -13,10 +13,11 @@ const mstp = (state, OwnProps) => {
 
 const mdtp = dispatch => {
     return {
-        login: (user) => dispatch(login(user)),
-        openModal: (modal) => dispatch(openModal(modal)),
-        closeModal: () => dispatch(closeModal(modal))
-    }
+      login: (user) => dispatch(login(user)),
+      openModal: (modal) => dispatch(openModal(modal)),
+      closeModal: () => dispatch(closeModal()),
+      clearErrors: () => dispatch(clearErrors()),
+    };
 }
 
 export default connect(mstp, mdtp)(Login)

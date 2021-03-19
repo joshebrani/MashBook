@@ -17,9 +17,14 @@ class Login extends React.Component {
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
-    // this.openModal = this.openModal.bind(this)
+    this.handleClick = this.handleClick.bind(this)
     
   }
+
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+  
   handleInput(type) {
     return (e) =>{
       this.setState({
@@ -39,16 +44,17 @@ class Login extends React.Component {
     this.props.login(demo).then(() => this.props.history.push("/feed"));
   }
 
-  // openModal(e) {
-  //   e.preventDefault()
-  //   this.props.openModal(<SignupFormContainer/>)
-  // }
+  handleClick(e) {
+    e.preventDefault();
+    this.props.clearErrors();
+    this.props.openModal('signup')
+  }
   
   render() {
-    // const [setModalIsOpen]  = useState(false);
+    // debugger
     let errormessage
-    if (this.props.errors) {
-      errormessage = this.props.errors;
+    if (this.props.errors.login) {
+      errormessage = this.props.errors.login;
     }
     return (
         <div>
@@ -84,7 +90,7 @@ class Login extends React.Component {
                   <SignupFormContainer/>
               </Modal> */}
             {/* <Link className="new" to="/signup">Create New Account</Link> */}
-            <button className='new' onClick= {()=>(this.props.openModal('signup'))}>Create New Account</button>
+            <button className='new' onClick= {this.handleClick}>Create New Account</button>
               {/* <SignupFormContainer/> */}
           </form>
         </div>
