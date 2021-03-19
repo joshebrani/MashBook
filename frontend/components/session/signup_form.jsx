@@ -31,7 +31,7 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state).then(() => this.props.history.push("/feed"));
+    this.props.signup(this.state).then(() => this.props.history.push("/feed")).then(this.props.closeModal);
   }
 
   render() {
