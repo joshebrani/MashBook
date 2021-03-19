@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    const store = configureStore()
+    const store = configureStore(preloadedState)
 
     // Testing Testing 1 2 3
 
