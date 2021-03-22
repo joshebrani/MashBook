@@ -1,0 +1,78 @@
+.open-post-form {
+    color: #b5b4b4;
+    background: #e4e4e459;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    width: 700px;
+    height: 10px;
+    font-size: 25px;
+    position: relative;
+    top: 200px;
+    right: 450px;
+    padding: 20px;
+}
+
+.open-post-form:hover {
+    cursor: pointer;
+    background: #d4d4d459;
+}
+
+
+.post-form {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: white;
+}
+
+.create-post {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.post-profile-head {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.post-form textarea {
+    border: none;
+    font-size: 26px;
+}
+
+.break {
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+}
+
+.post-button {
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-weight: 650;
+    font-size: 15px;
+    margin-left: 10px;
+    color: white;
+    background-color: #297ff0;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 35px;
+}
+
+.close-post {
+    position: absolute;
+    right: -200px;
+    width: 25px;
+    font-size: 25px;
+    margin-top: -15px;
+    top: 45px;
+    left: 220px;
+}
+
+.post-button:hover {
+    cursor: pointer;
+    background: #71a9f3;
+}

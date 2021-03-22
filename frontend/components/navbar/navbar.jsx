@@ -1,20 +1,29 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
+// import CreatePostFormContainer from '../posts/create/create_post_form_container';
 
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
-    this.logout = this.logout.bind(this)
+    this.logout = this.logout.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-
+  
   logout(e) {
     e.preventDefault();
     this.props.logout(this.state).then(() => this.props.history.push("/"));
   }
-
+  
+  handleClick(e) {
+    e.preventDefault();
+    this.props.openModal("Create Post");
+  }
+  
   render() {
+    // debugger
     return (
       <div>
         <div className="nav-top">
@@ -39,7 +48,13 @@ class NavBar extends React.Component {
             <img className="down-icon" src={window.down} alt="" />{" "}
           </div>
           <button onClick={this.logout}>Log Out</button>
+        <div onClick={this.handleClick} className='open-post-form'>
+          <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
         </div>
+        </div>
+
+        {/* <CreatePostFormContainer /> */}
+
 
         <div className="nav-side">
           {/* <p>profile</p> */}
@@ -66,4 +81,4 @@ class NavBar extends React.Component {
 }
 
 
-export default NavBar;
+export default withRouter(NavBar);

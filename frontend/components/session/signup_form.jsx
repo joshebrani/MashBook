@@ -129,12 +129,8 @@ class Signup extends React.Component {
               opt out any time.
             </p>
             <button
-              // onClick={() => {
-              //     {this.handleSubmit};
-              //     {() => this.props.closeModal()};
-              // }}
+
               onClick={this.handleSubmit}
-              //   onClick={() => this.props.closeModal()}
               className="new"
             >
               Sign Up

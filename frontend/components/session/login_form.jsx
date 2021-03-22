@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { withRouter } from "react-router-dom";
-// import Modal from 'react-modal';
-import SignupFormContainer from './signup_form_container'
 
 
 class Login extends React.Component {
@@ -51,7 +48,6 @@ class Login extends React.Component {
   }
   
   render() {
-    // debugger
     let errormessage
     if (this.props.errors.login) {
       errormessage = this.props.errors.login;
@@ -87,15 +83,10 @@ class Login extends React.Component {
 
           <div className="border"></div>
 
-          {/* <button onClick={() => setModalIsOpen(true)} className='new'>Create New Account</button>
-              <Modal isOpen={true}>
-                  <SignupFormContainer/>
-              </Modal> */}
-          {/* <Link className="new" to="/signup">Create New Account</Link> */}
+          
           <button className="new" onClick={this.handleClick}>
             Create New Account
           </button>
-          {/* <SignupFormContainer/> */}
         </form>
       </div>
     );
