@@ -19,7 +19,11 @@ class NavBar extends React.Component {
       <div>
         <div className="nav-top">
           <div className="m-s">
-            <img className="m-icon" src={window.m} alt="" />{" "}
+            <div className="m-icon">
+              <Link to="/feed">
+                <img src={window.m} alt="" />{" "}
+              </Link>
+            </div>
             <img className="search-icon" src={window.search} alt="" />{" "}
           </div>
 
@@ -46,11 +50,11 @@ class NavBar extends React.Component {
             </a>
           </p>
           <p>
-          <a href="https://github.com/joshebrani">
-            <img className="github-icon" src={window.github} alt="" /> Github
-          </a>
+            <a href="https://github.com/joshebrani">
+              <img className="github-icon" src={window.github} alt="" /> Github
+            </a>
           </p>
-          
+
           <p>3</p>
           <p>4</p>
           <p>5</p>

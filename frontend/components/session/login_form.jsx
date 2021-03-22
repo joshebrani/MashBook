@@ -57,44 +57,48 @@ class Login extends React.Component {
       errormessage = this.props.errors.login;
     }
     return (
-        <div>
-          <form className="login">
-            <div className="ep">
-              <input
-                type="text"
-                name="email"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.handleInput("email")}
-              />
-              <br />
-              <input
-                type="password"
-                name="email"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.handleInput("password")}
-              />
-            </div>
+      <div>
+        <form className="login">
+          <div className="ep">
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={this.state.email}
+              autoComplete="on"
+              onChange={this.handleInput("email")}
+            />
+            <br />
+            <input
+              type="password"
+              name="email"
+              placeholder="Password"
+              value={this.state.password}
+              autoComplete="on"
+              onChange={this.handleInput("password")}
+            />
+          </div>
 
-            <p className='error-login'>{errormessage}</p>
-            <div className="blue">
-              <button onClick={this.handleSubmit}>Log In</button>
-              <button onClick={this.handleDemo}>Demo User</button>
-            </div>
+          <p className="error-login">{errormessage}</p>
+          <div className="blue">
+            <button onClick={this.handleSubmit}>Log In</button>
+            <button onClick={this.handleDemo}>Demo User</button>
+          </div>
 
-            <div className="border"></div>
+          <div className="border"></div>
 
-            {/* <button onClick={() => setModalIsOpen(true)} className='new'>Create New Account</button>
+          {/* <button onClick={() => setModalIsOpen(true)} className='new'>Create New Account</button>
               <Modal isOpen={true}>
                   <SignupFormContainer/>
               </Modal> */}
-            {/* <Link className="new" to="/signup">Create New Account</Link> */}
-            <button className='new' onClick= {this.handleClick}>Create New Account</button>
-              {/* <SignupFormContainer/> */}
-          </form>
-        </div>
-      );
+          {/* <Link className="new" to="/signup">Create New Account</Link> */}
+          <button className="new" onClick={this.handleClick}>
+            Create New Account
+          </button>
+          {/* <SignupFormContainer/> */}
+        </form>
+      </div>
+    );
   }
 }
 

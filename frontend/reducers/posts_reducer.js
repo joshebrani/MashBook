@@ -10,7 +10,7 @@ const postsReducer = (oldState = {}, action) => {
         case RECEIVE_POST:
             return Object.assign({}, oldState, {[action.post.id]: action.post})
         case REMOVE_POST:
-            let newState = Object.assign({}, state)
+            let newState = Object.assign({}, oldState)
             delete newState[action.postId]
             return newState
         default:
