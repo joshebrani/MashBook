@@ -50,6 +50,7 @@ class Signup extends React.Component {
               <h1 className="su">Sign Up</h1>
               <p className="easy">It's quick and easy.</p>
             </div>
+            <div className='break-signup'></div>
             <p className="error-login">{errormessage}</p>
             <div className="text">
               <div className="fullname">
@@ -85,15 +86,17 @@ class Signup extends React.Component {
                   <input
                     type="password"
                     name="password"
-                    placeholder="Create new password"
+                    placeholder="New Password"
                     onChange={this.handleInput("password")}
                     value={this.state.password}
                   />
                 </div>
               </div>
             </div>
-            <div className="bday">
+            <div className='lab-b'>Birthday</div>
+            <div>
               <input
+              className='bday'
                 type="date"
                 name="birthday"
                 placeholder="1/1/2021"
@@ -101,6 +104,7 @@ class Signup extends React.Component {
                 value={this.state.birthday}
               />
             </div>
+            <div className='gb-label'>Gender</div>
             <div className="gender">
               <label>
                 Male
@@ -122,8 +126,19 @@ class Signup extends React.Component {
                   value={this.state.gender}
                 />
               </label>
+              <label>
+                Other
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Other"
+                  onChange={this.handleInput("gender")}
+                  value={this.state.gender}
+                />
+              </label>
             </div>
             <p className="footer">
+              This is not true but it looks nicer to have this there - 
               By clicking Sign Up, you agree to our Terms, Data Policy and
               Cookies Policy. You may receive SMS Notifications from us and can
               opt out any time.
@@ -131,7 +146,7 @@ class Signup extends React.Component {
             <button
 
               onClick={this.handleSubmit}
-              className="new"
+              className="sign-up-btn"
             >
               Sign Up
             </button>

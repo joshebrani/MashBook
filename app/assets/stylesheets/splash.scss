@@ -1,6 +1,6 @@
 .title {
     color: #3973fa;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 900;
     margin-bottom: 20px;
 }
@@ -36,7 +36,12 @@
     margin-bottom: 10px;
     outline: none;
     font-size: 17px;
+    border-radius: 5px;
 }
+
+.ep input::placeholder {
+    color: rgba(153, 153, 153, 0.945);
+} 
 
 .blue {
     display: flex;
@@ -108,7 +113,7 @@
 
 .modal-background {
   position: fixed;
-  background: rgba(58, 58, 58, 0.445);
+  background: rgba(255, 255, 255, 0.575);
   top: 0;
   bottom: 0;
   right: 0;
@@ -136,6 +141,7 @@
     padding: 16px;
     box-sizing: border-box;
     background: white;
+    border-radius: 5px;
 }
 
 .fullname {
@@ -145,20 +151,24 @@
     margin-bottom: 15px;
 }
 
+.fullname input {
+    margin-right: 10px;
+}
+
 .text input{
-    // width: 94%;
     background-color: #d3d3d338;
     border-radius: 6px;
     padding: 10px;
     font-size: 15px;
     line-height: 16px;
     font-family: sans-serif;
+    border: 1px solid #ccd0d5;
+    
 }
 
 .oneline input {
     margin-bottom: 15px;
-    margin-right: 10px;
-    width: 94%;
+    width: 91.5%;
 }
 
 .sign-head {
@@ -212,4 +222,82 @@
 
 .splash-footer p, a {
     margin-right: 20px;
+}
+
+.mash-splash {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+
+.break-signup {
+    border: 1px solid #ecebeb;
+    width: 100%;
+    
+}
+
+.bday {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    border: 1px solid #ccd0d5;
+    height: 18px;
+    color: #0d0d0e;
+    width: 362px;
+    right: 6px;
+    position: relative;
+}
+
+.gb-label {
+    color: #717171;
+    font-size: 13px;
+    position: relative;
+    right: 176px;
+}
+
+.gender {
+    display: flex;
+    width: 390px;
+    position: relative;
+    right: 6px;
+    justify-content: space-evenly;
+}
+
+.gender label {
+    box-sizing: border-box;
+    height: 36px;
+    width: 125px;
+    border-radius: 6px;
+    color: #0d0d0e;
+    font-size: 15px;
+    padding-left: 8px;
+    border: 1px solid #ccd0d5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.sign-up-btn {
+    height: 36px;
+    width: 194px;
+    background: #42b72a;
+    color: white;
+    font-size: 18px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+}
+
+.sign-up-btn:hover {
+    cursor: pointer;
+}
+
+.lab-b {
+     color: #717171;
+    font-size: 13px;
+    position: relative;
+    right: 173px;
 }

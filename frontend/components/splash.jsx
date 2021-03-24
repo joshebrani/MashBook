@@ -8,7 +8,7 @@ class Splash extends React.Component {
         return (
           <div>
             <header className="splash">
-              <div>
+              <div className='mash-splash'>
                 <h1 className="title">MashBook</h1>
                 <p className="desc">
                   Connect with friends and the world around you on Mashbook
