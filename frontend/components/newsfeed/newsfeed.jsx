@@ -15,30 +15,28 @@ class NewsFeed extends React.Component {
     this.props.openModal("Create Post");
   }
 
-  componentDidMount() {
-    this.props.getUsers();
-    this.props.getPosts();
-  }
+//   componentDidMount() {
+//     this.props.getUsers();
+//     this.props.getPosts();
+//   }
 
   render() {
     return (
-      <div className='main-feed-div'>
+      <div className="main-feed-div">
         <div>
           <NavbarContainer />
         </div>
-        
-        <div className='around-the-form'>
 
-        <div onClick={this.handleClick} className="open-post-form">
-          <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
-        </div>
+        <div className="around-the-form">
+        <img className="person-icon-form" src={window.person} alt="" />{" "}
+          <div onClick={this.handleClick} className="open-post-form">
+            <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
+          </div>
         </div>
 
-        <div className='feed-back'>
-            <PostIndexContainer/>
+        <div className="feed-back">
+          <PostIndexContainer />
         </div>
-        
-
       </div>
     );
   }

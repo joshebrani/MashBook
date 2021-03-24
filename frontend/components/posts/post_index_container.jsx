@@ -8,7 +8,7 @@ import { getUsers } from '../../actions/user_actions';
 const mstp = (state) => ({
   posts: Object.values(state.entities.posts),
   currentUser: state.session.currentUser.user,
-  authors: state.entities.users.users,
+  authors: state.entities.users,
 });
 
 

@@ -1,5 +1,8 @@
-.main-feed-div {
-    background:#f0f2f5;
+
+.person-icon-form {
+    width: 60px;
+    border-radius: 50px;
+    margin-right: 10px;
 }
 
 .open-post-form {
@@ -110,11 +113,52 @@
 }
 
 .after-post div {
-    border: 1px solid lightblue;
+    border: 1px solid gainsboro;
     font-size: 20px;
     padding: 10px;
     width: 600px;
     height: 200px;
     background: white;
     border-radius: 10px;
+    margin-bottom: 200px;
 }
+
+
+.person-icon {
+    width: 30px;
+    border-radius: 50px;
+}
+
+.like-and-comment {
+    display: flex;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgray;
+    margin-top: 40px;
+    justify-content: space-around;
+    color: #a2a1a1;
+}
+
+.like-and-comment p {
+    margin: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.like-and-comment p:hover {
+    background: #eaeaeab5;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.post-body {
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.poster-name {
+    font-size: 17px;
+    font-weight: bold;
+}
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
-import PostIndexContainer from '../posts/post_index_container';
+// import PostIndexContainer from '../posts/post_index_container';
 // import CreatePostFormContainer from '../posts/create/create_post_form_container';
 
 

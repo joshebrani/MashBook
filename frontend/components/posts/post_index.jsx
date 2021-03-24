@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PostIndexItem from './post_index_item';
 
 class PostIndex extends React.Component {
     constructor(props) {
@@ -8,28 +8,36 @@ class PostIndex extends React.Component {
 
     }
 
+
     componentDidMount() {
-        // this.props.getUsers();
-        this.props.getPosts();
+        this.props.getUsers().then(() => this.props.getPosts());
     }
 
     render() {
-        // debugger
         const {posts, destroyPost, authors} = this.props;
         return (
           <div>
             <ul className="after-post">
-              {posts.map((post) => (
-                <div key={post.id}>
-                  {/* {this.props.currentUser.fname} */}
-                  {/* {authors[post.post_author_id].fname} */}
-                  {/* {post.author} */}
-
-                  {post.body}
-                  <button
-                    onClick={() => destroyPost(post.id)}
-                  >Delete Post</button>
-                </div>
+              {posts.reverse().map(post => (
+                // <div key={post.id}>
+                //   <p>
+                //     {authors[post.post_author_id].fname +
+                //       " " +
+                //       authors[post.post_author_id].lname}
+                //   </p>
+                //     <p>
+                //   {post.body}
+                //      </p>
+                //   <button onClick={() => destroyPost(post.id)}>
+                //     Delete Post
+                //   </button>
+                // </div>
+                <PostIndexItem
+                post={post}
+                destroyPost={destroyPost}
+                authors={authors}
+                key={post.id}
+                />
               ))}
             </ul>
           </div>

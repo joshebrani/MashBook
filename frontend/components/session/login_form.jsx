@@ -19,8 +19,9 @@ class Login extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearErrors()
+    this.props.clearErrors();
   }
+
   
   handleInput(type) {
     return (e) =>{
