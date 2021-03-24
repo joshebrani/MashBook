@@ -3,14 +3,15 @@ import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import Splash from './splash'
 // import SignupFormContainer from '../components/session/signup_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
-import NavBarContainer from '../components/navbar/navbar_container'
+// import NavBarContainer from '../components/navbar/navbar_container'
 import Modal from './modal/modal'
+import NewsfeedContainer from '../components/newsfeed/newsfeed_container';
 
 const App = () => (
   <div>
     <Modal />
     <Switch>
-      <ProtectedRoute path="/feed" component={NavBarContainer} />
+      <ProtectedRoute path="/feed" component={NewsfeedContainer} />
       <AuthRoute exact path="/" component={Splash} />
     </Switch>
   </div>

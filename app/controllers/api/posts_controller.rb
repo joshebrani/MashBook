@@ -2,12 +2,12 @@ class Api::PostsController < ApplicationController
     before_action :require_logged_in
 
     def show
-        @post = Post.find(params[:id])
+        @post = Post.find_by(id: params[:id])
         render :show
     end
 
     def index
-        @post = Post.all
+        @posts = Post.all
         render :index
     end
 
@@ -21,7 +21,7 @@ class Api::PostsController < ApplicationController
     end
 
     def update
-        @post = Post.find_by(params[:id])
+        @post = Post.find_by(id: params[:id])
         if @post.update(post_params)
             render :show
         else
@@ -30,7 +30,7 @@ class Api::PostsController < ApplicationController
     end
 
     def destroy
-        @post = Post.find_by(params[:id])
+        @post = Post.find_by(id: params[:id])
         if @post.destroy
             render :show
         else

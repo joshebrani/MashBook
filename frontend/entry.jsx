@@ -7,6 +7,7 @@ import { signup, login, logout } from './actions/session_actions'
 import { signupUser, loginUser, logoutUser } from './util/session_api_util';
 import { fetchPosts, fetchPost, createPost, updatePost, deletePost} from './util/post_api_util';
 import { getPosts, getPost, makePost, editPost, destroyPost} from './actions/post_actions';
+import { getUsers, getUser } from './actions/user_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.makePost = makePost;
     window.editPost = editPost;
     window.destroyPost = destroyPost;
+
+    window.getUsers = getUsers;
+    window.getUser = getUser;
 
     // Done
 

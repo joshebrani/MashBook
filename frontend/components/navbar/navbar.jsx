@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
+import PostIndexContainer from '../posts/post_index_container';
 // import CreatePostFormContainer from '../posts/create/create_post_form_container';
 
 
@@ -9,7 +10,7 @@ class NavBar extends React.Component {
     super(props);
 
     this.logout = this.logout.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
   
   logout(e) {
@@ -17,10 +18,10 @@ class NavBar extends React.Component {
     this.props.logout(this.state).then(() => this.props.history.push("/"));
   }
   
-  handleClick(e) {
-    e.preventDefault();
-    this.props.openModal("Create Post");
-  }
+  // handleClick(e) {
+  //   e.preventDefault();
+  //   this.props.openModal("Create Post");
+  // }
   
   render() {
     // debugger
@@ -48,9 +49,11 @@ class NavBar extends React.Component {
             <img className="down-icon" src={window.down} alt="" />{" "}
           </div>
           <button onClick={this.logout}>Log Out</button>
+        {/* <PostIndexContainer/>
         <div onClick={this.handleClick} className='open-post-form'>
           <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
         </div>
+         */}
         </div>
 
         {/* <CreatePostFormContainer /> */}

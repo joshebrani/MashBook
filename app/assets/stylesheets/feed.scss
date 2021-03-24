@@ -1,3 +1,7 @@
+.main-feed-div {
+    background:#f0f2f5;
+}
+
 .open-post-form {
     color: #b5b4b4;
     background: #e4e4e459;
@@ -8,8 +12,23 @@
     height: 10px;
     font-size: 25px;
     position: relative;
+    // top: 200px;
+    // right: 450px;
+    // left: 450px;
+    padding: 20px;
+}
+
+.around-the-form {
+    background: white;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    width: 700px;
+    height: 60px;
+    font-size: 25px;
+    position: relative;
     top: 200px;
-    right: 450px;
+    left: 450px;
     padding: 20px;
 }
 
@@ -72,7 +91,30 @@
     left: 220px;
 }
 
+.close-post:hover {
+    cursor: pointer;
+    background: lightgray;
+    border-radius: 10px;
+}
+
 .post-button:hover {
     cursor: pointer;
     background: #71a9f3;
+}
+
+
+.after-post {
+    top: 400px;
+    left: 500px;
+    position: relative;
+}
+
+.after-post div {
+    border: 1px solid lightblue;
+    font-size: 20px;
+    padding: 10px;
+    width: 600px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
 }

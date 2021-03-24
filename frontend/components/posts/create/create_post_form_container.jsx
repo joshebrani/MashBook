@@ -10,8 +10,8 @@ const mstp = (state, ownProps) => {
     //   openModal: state.ui.modal,
       formType: "Create Post",
       currentUser: state.session.currentUser.user,
-    //   postAuthorId: state.entities.posts.id.post_author_id,
-    //   wall_id: state.entities.posts.id.wall_id
+      post_author_id: state.session.currentUser.user.id,
+      wall_id: state.session.currentUser.user.id,
     };
 }
 

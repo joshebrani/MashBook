@@ -3,6 +3,7 @@ import { RECEIVE_ALL_POSTS, RECEIVE_POST, REMOVE_POST } from '../actions/post_ac
 
 const postsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
+    // debugger
 
     switch (action.type) {
         case RECEIVE_ALL_POSTS:

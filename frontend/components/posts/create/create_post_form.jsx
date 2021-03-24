@@ -7,7 +7,9 @@ class CreatePostForm extends React.Component {
         super(props);
         
         this.state = {
-            body: ""
+            body: "",
+            post_author_id: this.props.post_author_id,
+            wall_id: this.props.wall_id
 
             
         }
@@ -37,6 +39,7 @@ class CreatePostForm extends React.Component {
 
 
     render() {
+      // debugger
         return (
           <section className="modal-background">
             <form className="modal-child">
