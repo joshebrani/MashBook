@@ -12,8 +12,8 @@ export const fetchUser = (userId) => {
   });
 };
 
-export const deleteUser = (userId) =>
-  $.ajax({
-    url: `/api/users/${userId}`,
-    method: "DELETE",
-  });
+// export const deleteUser = (userId) =>
+//   $.ajax({
+//     url: `/api/users/${userId}`,
+//     method: "DELETE",
+//   });

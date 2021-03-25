@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { openModal, closeModal } from "../../actions/modal_actions";
-import { destroyUser, getUsers } from "../../actions/user_actions";
+import { getUsers } from "../../actions/user_actions";
 import UserSidebar from "./user_sidebar";
 
 const mstp = (state) => ({
@@ -14,7 +14,7 @@ const mdtp = (dispatch) => ({
   getPosts: () => dispatch(getPosts()),
   destroyPost: (postId) => dispatch(destroyPost(postId)),
   getUsers: () => dispatch(getUsers()),
-  destroyUser: (userId) => dispatch(destroyUser(userId))
+//   destroyUser: (userId) => dispatch(destroyUser(userId))
 });
 
 export default connect(mstp, mdtp)(UserSidebar);

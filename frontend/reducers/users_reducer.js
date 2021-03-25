@@ -14,10 +14,10 @@ const usersReducer = (state = {}, action) => {
             let newState = Object.assign({}, state)
             newState[action.user.id] = action.user
             return newState;    
-        case REMOVE_USER:
-            let nextState = Object.assign({}, state)
-            delete nextState[action.userId]
-            return nextState;
+        // case REMOVE_USER:
+        //     let nextState = Object.assign({}, state)
+        //     delete nextState[action.userId]
+        //     return nextState;
         default:
             return state
     }
