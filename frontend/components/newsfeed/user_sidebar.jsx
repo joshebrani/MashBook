@@ -22,9 +22,9 @@ class UserSidebar extends React.Component {
               <p className="user-contact">
                 <img className="person-icon" src={window.person} alt="" />{" "}
                 {user.fname + " " + user.lname}
-                <button onClick={() => this.props.destroyUser(user.id)}>
+                {/* <button onClick={() => this.props.destroyUser(user.id)}>
                   Delete Post
-                </button>
+                </button> */}
               </p>
             ))}
           </div>

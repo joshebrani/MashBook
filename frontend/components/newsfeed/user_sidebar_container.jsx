@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { openModal, closeModal } from "../../actions/modal_actions";
-import { destroyUser } from "../../actions/user_actions";
+import { destroyUser, getUsers } from "../../actions/user_actions";
 import UserSidebar from "./user_sidebar";
 
 const mstp = (state) => ({
