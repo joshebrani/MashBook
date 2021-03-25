@@ -1,5 +1,5 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
-import { RECEIVE_ALL_USERS, RECEIVE_USER } from '../actions/user_actions';
+import { RECEIVE_ALL_USERS, RECEIVE_USER, REMOVE_USER } from '../actions/user_actions';
 
 
 const usersReducer = (state = {}, action) => {
@@ -14,6 +14,10 @@ const usersReducer = (state = {}, action) => {
             let newState = Object.assign({}, state)
             newState[action.user.id] = action.user
             return newState;    
+        case REMOVE_USER:
+            let nextState = Object.assign({}, state)
+            delete nextState[action.userId]
+            return nextState;
         default:
             return state
     }
