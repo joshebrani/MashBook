@@ -13,9 +13,10 @@ const PostIndexItem = (props) => (
   <div>
     <p className='poster-name'>
       <img className="person-icon" src={window.person} alt="" />{" "}
-      {props.authors[props.post.post_author_id].fname +
+      {/* {props.authors[props.post.post_author_id].fname +
         " " +
-        props.authors[props.post.post_author_id].lname}
+        props.authors[props.post.post_author_id].lname} */}
+        Technical Difficulties 
     </p>
         <p className='time-post'>{findDate(props.post.created_at)}</p>
     <p className='post-body'>{props.post.body}</p>
