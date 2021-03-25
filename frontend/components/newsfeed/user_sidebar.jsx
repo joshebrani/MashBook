@@ -9,8 +9,9 @@ class UserSidebar extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getUsers().then(() => this.props.getPosts());
+        this.props.getUsers()
     }
+    // .then(() => this.props.getPosts());
 
     
     render() {
