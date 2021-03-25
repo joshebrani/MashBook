@@ -19,7 +19,7 @@ class Api::UsersController < ApplicationController
             render 'api/users/show'
         else
             # render json: @user.errors.full_messages, status: 422
-            render json: ["1) Input field(s) cannot be blank  2) Password must be at least 6 characters"], status: 422
+            render json: ["Input field(s) cannot be blank", "Password must be at least 6 characters", "Email must be unique"], status: 422
         end
     end
 

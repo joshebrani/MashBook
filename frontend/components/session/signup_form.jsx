@@ -50,8 +50,8 @@ class Signup extends React.Component {
               <h1 className="su">Sign Up</h1>
               <p className="easy">It's quick and easy.</p>
             </div>
-            <div className='break-signup'></div>
-            <p className="error-login">{errormessage}</p>
+            <div className="break-signup"></div>
+            <p className="error-login">{errormessage[0]}</p>
             <div className="text">
               <div className="fullname">
                 <input
@@ -72,6 +72,7 @@ class Signup extends React.Component {
               </div>
 
               <div className="oneline">
+                <p className="error-login">{errormessage[2]}</p>
                 <div className="email">
                   <input
                     type="text"
@@ -81,7 +82,7 @@ class Signup extends React.Component {
                     value={this.state.email}
                   />
                 </div>
-
+                <p className="error-login">{errormessage[1]}</p>
                 <div className="pass">
                   <input
                     type="password"
@@ -93,10 +94,10 @@ class Signup extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='lab-b'>Birthday</div>
+            <div className="lab-b">Birthday</div>
             <div>
               <input
-              className='bday'
+                className="bday"
                 type="date"
                 name="birthday"
                 placeholder="1/1/2021"
@@ -104,7 +105,7 @@ class Signup extends React.Component {
                 value={this.state.birthday}
               />
             </div>
-            <div className='gb-label'>Gender</div>
+            <div className="gb-label">Gender</div>
             <div className="gender">
               <label>
                 Male
@@ -138,16 +139,12 @@ class Signup extends React.Component {
               </label>
             </div>
             <p className="footer">
-              This is not true but it looks nicer to have this there - 
-              By clicking Sign Up, you agree to our Terms, Data Policy and
-              Cookies Policy. You may receive SMS Notifications from us and can
-              opt out any time.
+              This is not true but it looks nicer to have this there - By
+              clicking Sign Up, you agree to our Terms, Data Policy and Cookies
+              Policy. You may receive SMS Notifications from us and can opt out
+              any time.
             </p>
-            <button
-
-              onClick={this.handleSubmit}
-              className="sign-up-btn"
-            >
+            <button onClick={this.handleSubmit} className="sign-up-btn">
               Sign Up
             </button>
           </div>
