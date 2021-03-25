@@ -144,6 +144,7 @@
     padding-right: 50px;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-size: 18px;
 }
 
 .like-and-comment p:hover {
@@ -160,6 +161,7 @@
 .poster-name {
     font-size: 17px;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 .contacts {
@@ -175,4 +177,10 @@
 
 .contacts p {
     padding: 10px;
+}
+
+.time-post {
+    font-size: 13px;
+    color: #b0b3b8;
+
 }

@@ -12,6 +12,7 @@ class UserSidebar extends React.Component {
         this.props.getUsers();
     }
 
+    
     render() {
         const { users } = this.props
         return (

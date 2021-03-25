@@ -48,7 +48,7 @@ class NavBar extends React.Component {
             <img className="bell-icon" src={window.bell} alt="" />{" "}
             <img className="down-icon" src={window.down} alt="" />{" "}
           </div>
-          <button onClick={this.logout}>Log Out</button>
+          <div className="logout-nav" onClick={this.logout}>Log Out</div>
         {/* <PostIndexContainer/>
         <div onClick={this.handleClick} className='open-post-form'>
           <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
