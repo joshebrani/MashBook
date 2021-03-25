@@ -15,7 +15,7 @@ class UserSidebar extends React.Component {
     render() {
         const { users } = this.props
         return (
-          <div className="contacts">
+          <div>
             <h1>Contacts</h1>
             {users.map((user) => (
               <p className="user-contact">
