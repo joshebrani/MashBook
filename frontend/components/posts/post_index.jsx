@@ -14,7 +14,7 @@ class PostIndex extends React.Component {
     }
 
     render() {
-        const {posts, destroyPost, authors} = this.props;
+        const {posts, destroyPost, authors, openModal, closeModal} = this.props;
         return (
           <div>
             <ul className="after-post">
@@ -37,6 +37,8 @@ class PostIndex extends React.Component {
                 destroyPost={destroyPost}
                 authors={authors}
                 key={post.id}
+                openModal={openModal}
+                closeModal={closeModal}
                 />
               ))}
             </ul>

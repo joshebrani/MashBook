@@ -5,6 +5,10 @@ import React from 'react';
         //     return date.toDateString() + " at " + date.toLocaleTimeString();
         //     }
 
+        // const arr = [`${window.search}`, `${window.home}`, `${window.messages}`]
+        // let randomNum = Math.floor(Math.random() * arr.length);
+        // let randomImage = arr[randomNum]
+
 const PostIndexItem = (props) => (
   <div>
     {/* <p>{dateParser(props.post.createdAt)}</p> */}
@@ -18,6 +22,9 @@ const PostIndexItem = (props) => (
     <button onClick={() => props.destroyPost(props.post.id)}>
       Delete Post
     </button>
+    {/* <button onClick={() => props.openModal("Edit Post")}>
+        Edit
+    </button> */}
 
     <ul className='like-and-comment'>
         <p>Like</p>

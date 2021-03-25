@@ -1,6 +1,7 @@
 import React from 'react';
 import NavbarContainer from '../navbar/navbar_container';
 import PostIndexContainer from '../posts/post_index_container';
+import UserSidebarContainer from './user_sidebar_container';
 
 
 class NewsFeed extends React.Component {
@@ -33,10 +34,14 @@ class NewsFeed extends React.Component {
             <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
           </div>
         </div>
+        <div>
+            <UserSidebarContainer/>
+        </div>
 
         <div className="feed-back">
           <PostIndexContainer />
         </div>
+
       </div>
     );
   }

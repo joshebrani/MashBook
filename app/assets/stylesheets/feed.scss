@@ -31,7 +31,7 @@
     font-size: 25px;
     position: relative;
     top: 200px;
-    left: 450px;
+    left: 400px;
     padding: 20px;
 }
 
@@ -107,8 +107,8 @@
 
 
 .after-post {
-    top: 400px;
-    left: 500px;
+    top: -900px;
+    left: 405px;
     position: relative;
 }
 
@@ -116,7 +116,7 @@
     border: 1px solid gainsboro;
     font-size: 20px;
     padding: 10px;
-    width: 600px;
+    width: 700px;
     height: 200px;
     background: white;
     border-radius: 10px;
@@ -162,3 +162,17 @@
     font-weight: bold;
 }
 
+.contacts {
+    position: relative;
+    left: 1380px;
+}
+
+.contacts h1 {
+    font-size: 20px;
+    color: #8e8e8e;
+    font-family: sans-serif;
+}
+
+.contacts p {
+    padding: 10px;
+}
