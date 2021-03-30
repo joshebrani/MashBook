@@ -24,7 +24,7 @@
 
 ## Brief Overview
 
-MashBook, hosted on heroku, uses Ruby on Rails as its backend API, PostgreSQL for it's database, React and Redux to mange rendering its frontend, jbuilder to send content from the backend to frontend, and CSS for the styling.
+MashBook, hosted on heroku, uses Ruby on Rails as its backend API, PostgreSQL for it's database, React and Redux to manage rendering its frontend, jbuilder to send content from the backend to frontend, and CSS for the styling.
 
 ![Screen Shot 2021-03-26 at 10.42.37 AM![image]](https://user-images.githubusercontent.com/75503365/112651572-e790f080-8e22-11eb-85de-6394a7a2130c.png)
 
