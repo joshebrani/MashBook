@@ -16,10 +16,9 @@ class NewsFeed extends React.Component {
     this.props.openModal("Create Post");
   }
 
-//   componentDidMount() {
-//     this.props.getUsers();
-//     this.props.getPosts();
-//   }
+  componentDidMount() {
+    this.props.getUsers().then(() => this.props.getPosts());
+  }
 
   render() {
     return (

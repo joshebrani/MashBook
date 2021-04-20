@@ -22,10 +22,10 @@ class Login extends React.Component {
     this.props.clearErrors();
   }
 
-  componentDidMount() {
-    this.props.getUsers()
-    .then(() => this.props.getPosts())
-  }
+  // componentDidMount() {
+  //   this.props.getUsers()
+  //   .then(() => this.props.getPosts())
+  // }
 
   handleInput(type) {
     return (e) =>{
