@@ -45,8 +45,8 @@ class Login extends React.Component {
     const demo = { email: "demouser@aol.com", password: "password" };
     this.props.login(demo)
     .then(() => this.props.history.push("/feed"))
-    .then(() => this.props.getPosts())
     .then(() => this.props.getUsers())
+    .then(() => this.props.getPosts())
   }
 
   handleClick(e) {
