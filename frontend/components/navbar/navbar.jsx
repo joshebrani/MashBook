@@ -12,17 +12,21 @@ class NavBar extends React.Component {
     this.logout = this.logout.bind(this);
     // this.handleClick = this.handleClick.bind(this);
   }
-  
+
   logout(e) {
     e.preventDefault();
     this.props.logout(this.state).then(() => this.props.history.push("/"));
   }
-  
+
+  componentDidMount() {
+    this.props.getUsers();
+  }
+
   // handleClick(e) {
   //   e.preventDefault();
   //   this.props.openModal("Create Post");
   // }
-  
+
   render() {
     // debugger
     return (
@@ -48,8 +52,10 @@ class NavBar extends React.Component {
             <img className="bell-icon" src={window.bell} alt="" />{" "}
             <img className="down-icon" src={window.down} alt="" />{" "}
           </div>
-          <div className="logout-nav" onClick={this.logout}>Log Out</div>
-        {/* <PostIndexContainer/>
+          <div className="logout-nav" onClick={this.logout}>
+            Log Out
+          </div>
+          {/* <PostIndexContainer/>
         <div onClick={this.handleClick} className='open-post-form'>
           <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
         </div>
@@ -57,7 +63,6 @@ class NavBar extends React.Component {
         </div>
 
         {/* <CreatePostFormContainer /> */}
-
 
         <div className="nav-side">
           {/* <p>profile</p> */}
