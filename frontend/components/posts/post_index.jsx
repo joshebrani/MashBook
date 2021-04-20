@@ -10,9 +10,9 @@ class PostIndex extends React.Component {
 
 
     // componentDidMount() {
-    //     this.props.getPosts()
+    //     this.props.getUsers().then(() => this.props.getPosts());
     // }
-    // .then(() => this.props.getUsers());
+    
 
     render() {
         const {posts, destroyPost, authors, openModal, closeModal} = this.props;
