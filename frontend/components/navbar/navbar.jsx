@@ -19,7 +19,7 @@ class NavBar extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getUsers();
+    this.props.getUsers().then(() => this.props.getPosts());
   }
 
   // handleClick(e) {
