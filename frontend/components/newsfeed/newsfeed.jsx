@@ -28,7 +28,7 @@ class NewsFeed extends React.Component {
         </div>
 
         <div className="around-the-form">
-          {this.props.currentUser.gender === 'Female' ?
+          {this.props.currentUser.user.gender === 'Female' ?
         <img className="person-icon-form" src={window.female} alt="" /> :
         <img className="person-icon-form" src={window.male} alt="" /> }
           <div onClick={this.handleClick} className="open-post-form">
