@@ -13,16 +13,16 @@ const PostIndexItem = (props) => (
   <div>
     <p className='poster-name'>
       <img className="person-icon" src={window.person} alt="" />{" "}
-      {props.post !== null ? props.authors[props.post.post_author_id].fname +
+      {props.post.post_author_id ? props.authors[props.post.post_author_id].fname +
         " " +
-        props.authors[props.post.post_author_id].lname : null}
+        props.authors[props.post.post_author_id].lname : 'Technical Difficulties'}
         {/* Technical Difficulties  */}
     </p>
         <p className='time-post'>{findDate(props.post.created_at)}</p>
     <p className='post-body'>{props.post.body}</p>
-    <button onClick={() => props.destroyPost(props.post.id)}>
+    {props.post.post_author_id === props.currentUser.id ? <button onClick={() => props.destroyPost(props.post.id)}>
       Delete Post
-    </button>
+    </button> : null}
     {/* <button onClick={() => props.openModal("Edit Post")}>
         Edit
     </button> */}

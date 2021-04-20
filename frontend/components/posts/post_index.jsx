@@ -10,13 +10,13 @@ class PostIndex extends React.Component {
     }
 
 
-    // componentDidMount() {
-    //     this.props.getUsers().then(() => this.props.getPosts());
-    // }
+    componentDidMount() {
+        this.props.getUsers().then(() => this.props.getPosts());
+    }
     
 
     render() {
-        const {posts, destroyPost, authors, openModal, closeModal} = this.props;
+        const {posts, currentUser, destroyPost, authors, openModal, closeModal} = this.props;
         return (
           <div>
             <ul className="after-post">
@@ -36,6 +36,7 @@ class PostIndex extends React.Component {
                 // </div>
                 <PostIndexItem
                 post={post}
+                currentUser={currentUser}
                 destroyPost={destroyPost}
                 authors={authors}
                 key={post.id}
