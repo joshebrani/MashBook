@@ -11,25 +11,29 @@ import React from 'react';
 
 const PostIndexItem = (props) => (
   <div>
-    <p className='poster-name'>
+    <p className="poster-name">
       <img className="person-icon" src={window.person} alt="" />{" "}
-      {props.post.post_author_id ? props.authors[props.post.post_author_id].fname +
-        " " +
-        props.authors[props.post.post_author_id].lname : 'Technical Difficulties'}
-        {/* Technical Difficulties  */}
+      {props.authors[props.post.post_author_id]
+        ? props.authors[props.post.post_author_id].fname +
+          " " +
+          props.authors[props.post.post_author_id].lname
+        : "Technical Difficulties"}
+      {/* Technical Difficulties  */}
     </p>
-        <p className='time-post'>{findDate(props.post.created_at)}</p>
-    <p className='post-body'>{props.post.body}</p>
-    {props.post.post_author_id === props.currentUser.id ? <button onClick={() => props.destroyPost(props.post.id)}>
-      Delete Post
-    </button> : null}
+    <p className="time-post">{findDate(props.post.created_at)}</p>
+    <p className="post-body">{props.post.body}</p>
+    {props.post.post_author_id === props.currentUser.id ? (
+      <button onClick={() => props.destroyPost(props.post.id)}>
+        Delete Post
+      </button>
+    ) : null}
     {/* <button onClick={() => props.openModal("Edit Post")}>
         Edit
     </button> */}
 
-    <ul className='like-and-comment'>
-        <p>Like</p>
-        <p>Comment</p>
+    <ul className="like-and-comment">
+      <p>Like</p>
+      <p>Comment</p>
     </ul>
   </div>
 );
