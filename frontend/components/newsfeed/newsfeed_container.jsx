@@ -1,6 +1,8 @@
 import { connect } from "react-redux";
 import { openModal, closeModal } from "../../actions/modal_actions";
 import NewsFeed from "./newsfeed";
+import { getUsers } from "../../actions/user_actions";
+import { getPosts, destroyPost } from "../../actions/post_actions";
 
 const mstp = (state) => ({
   currentUser: state.session.currentUser,

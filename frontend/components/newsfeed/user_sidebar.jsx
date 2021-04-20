@@ -8,10 +8,10 @@ class UserSidebar extends React.Component {
 
     }
 
-    componentDidMount() {
-        this.props.getUsers()
-        .then(() => this.props.getPosts());
-    }
+    // componentDidMount() {
+    //     this.props.getUsers()
+    //     .then(() => this.props.getPosts());
+    // }
 
     
     render() {
@@ -20,7 +20,7 @@ class UserSidebar extends React.Component {
           <div>
             <h1>Contacts</h1>
             {users.map((user) => (
-              <p className="user-contact">
+              <p className="user-contact" key={user.id}>
                 <img className="person-icon" src={window.person} alt="" />{" "}
                 {user.fname + " " + user.lname}
                 {/* <button onClick={() => this.props.destroyUser(user.id)}>
