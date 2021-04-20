@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { openModal, closeModal } from "../../actions/modal_actions";
 import { getUsers } from "../../actions/user_actions";
+import {getPosts } from '../../actions/post_actions';
 import UserSidebar from "./user_sidebar";
 
 const mstp = (state) => ({
