@@ -22,7 +22,7 @@ class UserSidebar extends React.Component {
             {users.map((user) => (
               <p className="user-contact">
                 <img className="person-icon" src={window.person} alt="" />{" "}
-                {user.fname + " " + user.lname}
+                {user.fname && user.lname ? user.fname + " " + user.lname : user.user.fname}
                 {/* <button onClick={() => this.props.destroyUser(user.id)}>
                   Delete Post
                 </button> */}
