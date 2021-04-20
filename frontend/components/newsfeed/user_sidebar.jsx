@@ -21,7 +21,9 @@ class UserSidebar extends React.Component {
             <h1>Contacts</h1>
             {users.map((user) => (
               <p className="user-contact" key={user.id}>
-                <img className="person-icon" src={window.person} alt="" />{" "}
+                {user.gender === 'Female' ?
+                <img className="person-icon" src={window.female} alt="" /> :
+                <img className="person-icon" src={window.male} alt="" /> }
                 {user.fname + " " + user.lname}
                 {/* <button onClick={() => this.props.destroyUser(user.id)}>
                   Delete Post

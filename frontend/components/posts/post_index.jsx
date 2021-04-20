@@ -43,7 +43,7 @@ class PostIndex extends React.Component {
                 openModal={openModal}
                 closeModal={closeModal}
                 />
-              )) : 'No posts yet'}
+              )) : 'Loading...'}
             </ul>
           </div>
         );
