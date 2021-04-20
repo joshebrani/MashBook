@@ -20,7 +20,7 @@ class PostIndex extends React.Component {
         return (
           <div>
             <ul className="after-post">
-              {posts.reverse().map(post => (
+              {posts.length > 0 ? posts.reverse().map(post => (
                 // <div key={post.id}>
                 //   <p>
                 //     {authors[post.post_author_id].fname +
@@ -42,7 +42,7 @@ class PostIndex extends React.Component {
                 openModal={openModal}
                 closeModal={closeModal}
                 />
-              ))}
+              )) : 'No posts yet'}
             </ul>
           </div>
         );
