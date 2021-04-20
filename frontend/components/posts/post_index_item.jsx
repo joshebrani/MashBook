@@ -12,12 +12,15 @@ import React from 'react';
 const PostIndexItem = (props) => (
   <div>
     <p className="poster-name">
-      <img className="person-icon" src={window.person} alt="" />{" "}
+      {props.authors[props.post.post_author_id] && props.authors[props.post.post_author_id].gender === 'Female' ?
+      <img className="person-icon" src={window.female} alt="" /> :
+      <img className="person-icon" src={window.male} alt="" />
+      }
       {props.authors[props.post.post_author_id]
         ? props.authors[props.post.post_author_id].fname +
           " " +
           props.authors[props.post.post_author_id].lname
-        : "Technical Difficulties"}
+        : "Mystery Man"}
       {/* Technical Difficulties  */}
     </p>
     <p className="time-post">{findDate(props.post.created_at)}</p>

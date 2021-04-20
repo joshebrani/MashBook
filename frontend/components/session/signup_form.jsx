@@ -12,7 +12,7 @@ class Signup extends React.Component {
       email: "",
       password: "",
       birthday: "",
-      gender: "",
+      gender: ""
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -112,9 +112,8 @@ class Signup extends React.Component {
                 <input
                   type="radio"
                   name="gender"
-                  value="Male"
                   onChange={this.handleInput("gender")}
-                  value={this.state.gender}
+                  value="Male"
                 />
               </label>
               <label>
@@ -122,9 +121,8 @@ class Signup extends React.Component {
                 <input
                   type="radio"
                   name="gender"
-                  value="Female"
                   onChange={this.handleInput("gender")}
-                  value={this.state.gender}
+                  value="Female"
                 />
               </label>
               <label>
@@ -132,9 +130,8 @@ class Signup extends React.Component {
                 <input
                   type="radio"
                   name="gender"
-                  value="Other"
                   onChange={this.handleInput("gender")}
-                  value={this.state.gender}
+                  value="Other"
                 />
               </label>
             </div>
