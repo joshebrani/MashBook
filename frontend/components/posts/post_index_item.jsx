@@ -12,10 +12,12 @@ import React from 'react';
 const PostIndexItem = (props) => (
   <div>
     <p className="poster-name">
-      {props.authors[props.post.post_author_id] && props.authors[props.post.post_author_id].gender === 'Female' ?
-      <img className="person-icon" src={window.female} alt="" /> :
-      <img className="person-icon" src={window.male} alt="" />
-      }
+      {props.authors[props.post.post_author_id] &&
+      props.authors[props.post.post_author_id].gender === "Female" ? (
+        <img className="person-icon" src={window.female} alt="" />
+      ) : (
+        <img className="person-icon" src={window.male} alt="" />
+      )}
       {props.authors[props.post.post_author_id]
         ? props.authors[props.post.post_author_id].fname +
           " " +
@@ -30,9 +32,9 @@ const PostIndexItem = (props) => (
         Delete Post
       </button>
     ) : null}
-    {/* <button onClick={() => props.openModal("Edit Post")}>
-        Edit
-    </button> */}
+    {props.post.post_author_id === props.currentUser.id ? (
+      <button onClick={() => props.openModal("Edit Post")}>Edit</button>
+    ) : null}
 
     <ul className="like-and-comment">
       <p>Like</p>
