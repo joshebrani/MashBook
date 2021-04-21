@@ -4,7 +4,7 @@ import React from "react";
 class EditPostForm extends React.Component {
   constructor(props) {
     super(props);
-    debugger
+    // debugger
 
     this.state = {
       body: this.props.body,

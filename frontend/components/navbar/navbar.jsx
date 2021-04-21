@@ -56,7 +56,7 @@ class NavBar extends React.Component {
             <img className="down-icon" src={window.down} alt="" />{" "}
           </div>
           <div className="logout-nav" onClick={this.logout}>
-            <img className="down-icon" src={window.logout} alt="" /> Log Out
+            <img className="down-icon" src={window.ex} alt="" /> Log Out
           </div>
           {/* <PostIndexContainer/>
         <div onClick={this.handleClick} className='open-post-form'>

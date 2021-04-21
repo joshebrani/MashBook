@@ -32,7 +32,9 @@
 }
 
 .h-v-g img{
-    margin-left: 30px;
+    // margin-left: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .m-b-d {
@@ -41,15 +43,33 @@
 
 .m-b-d img{
     margin-right: 50px;
+    background: #f0f2f5;
+    border-radius: 50px;
 }
 
 
-.nav-top img:hover {
+.h-v-g img:hover {
     cursor: pointer;
-    background: rgb(230, 228, 228);
+    background: #dcdada;
     color: rgb(25, 114, 216);
     // border-bottom: 3px solid rgb(25, 114, 216);
     border-radius: 6px;
+}
+
+.m-s img:hover {
+    cursor: pointer;
+    background: #dcdada;
+    color: rgb(25, 114, 216);
+    // border-bottom: 3px solid rgb(25, 114, 216);
+    border-radius: 6px;
+}
+
+.m-b-d img:hover {
+    cursor: pointer;
+    background: #dcdada;
+    color: rgb(25, 114, 216);
+    // border-bottom: 3px solid rgb(25, 114, 216);
+    border-radius: 50px;
 }
 
 .nav-side {
@@ -88,15 +108,19 @@
 .logout-nav {
     // width: 60px;
     // height: 30px;
-    padding: 10px;
+    // padding: 10px;
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    // height: 20px;
+    height: 30px;
+    padding: 10px;
 }
 
 .logout-nav:hover {
     cursor: pointer;
     background: rgb(230, 228, 228);
-    color: rgb(25, 114, 216);
+    // color: rgb(25, 114, 216);
     // border-bottom: 3px solid rgb(25, 114, 216);
     border-radius: 6px;
 }
