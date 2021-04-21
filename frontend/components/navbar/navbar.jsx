@@ -45,6 +45,9 @@ class NavBar extends React.Component {
             <img className="home-icon" src={window.home} alt="" />{" "}
             <img className="video-icon" src={window.video} alt="" />{" "}
             <img className="group-icon" src={window.group} alt="" />{" "}
+            <a href="https://joshebrani.github.io/Defend-My-Food/">
+              <img className="game-icon" src={window.game} alt="" />{" "}
+            </a>
           </div>
 
           <div className="m-b-d">
@@ -53,7 +56,7 @@ class NavBar extends React.Component {
             <img className="down-icon" src={window.down} alt="" />{" "}
           </div>
           <div className="logout-nav" onClick={this.logout}>
-            Log Out
+            <img className="down-icon" src={window.logout} alt="" /> Log Out
           </div>
           {/* <PostIndexContainer/>
         <div onClick={this.handleClick} className='open-post-form'>

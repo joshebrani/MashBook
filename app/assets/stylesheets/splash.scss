@@ -148,7 +148,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
 }
 
 .fullname input {
@@ -167,8 +167,12 @@
 }
 
 .oneline input {
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     width: 91.5%;
+}
+
+.pass {
+    margin-bottom: 15px;
 }
 
 .sign-head {
@@ -229,9 +233,10 @@
 }
 
 .break-signup {
-    border: 1px solid #ecebeb;
-    width: 100%;
-    
+    // border: 1px solid #ecebeb;
+    width: 107%;
+    padding: 1px 0 0 0;
+    background-color: #dedede;
 }
 
 .bday {
@@ -252,6 +257,7 @@
     font-size: 13px;
     position: relative;
     right: 176px;
+    margin-bottom: 3px;
 }
 
 .gender {
@@ -299,4 +305,5 @@
     font-size: 13px;
     position: relative;
     right: 173px;
+    margin-bottom: 3px;
 }
