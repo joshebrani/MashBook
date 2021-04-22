@@ -7,7 +7,7 @@ class EditPostForm extends React.Component {
     // debugger
 
     this.state = {
-      body: this.props.body,
+      body: "",
       post_author_id: this.props.post_author_id,
       wall_id: this.props.wall_id,
     };
