@@ -8,6 +8,8 @@ import { signupUser, loginUser, logoutUser } from './util/session_api_util';
 import { fetchPosts, fetchPost, createPost, updatePost, deletePost} from './util/post_api_util';
 import { getPosts, getPost, makePost, editPost, destroyPost} from './actions/post_actions';
 import { getUsers, getUser } from './actions/user_actions';
+import { createComment, editComment, deleteComment } from './util/comment_api_util';
+import { makeComment, updateComment, destroyComment } from './actions/comment_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,6 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.getUsers = getUsers;
     window.getUser = getUser;
+
+    window.createComment = createComment; 
+    window.editComment = editComment;
+    window.deleteComment = deleteComment;
+
+    window.makeComment = makeComment; 
+    window.updateComment = updateComment; 
+    window.destroyComment = destroyComment;
 
     // Done
 
