@@ -7,7 +7,7 @@
 
 .open-post-form {
     color: #b5b4b4;
-    background: #e4e4e459;
+    background: #f0f2f5;
     border-radius: 20px;
     align-items: center;
     display: flex;
@@ -118,10 +118,10 @@
     font-size: 20px;
     padding: 10px;
     width: 700px;
-    height: 200px;
+    // height: 200px;
     background: white;
     border-radius: 10px;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 
@@ -183,5 +183,72 @@
 .time-post {
     font-size: 13px;
     color: #b0b3b8;
+
+}
+
+.comment-form {
+    background: #f0f2f5;
+    border-radius: 20px;
+    /* align-items: center; */
+    /* display: flex; */
+    width: 600px;
+    height: 20px;
+    font-size: 15px;
+    /* position: relative; */
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    background: #f0f2f5;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.comment-name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.comment-body {
+    font-size: 15px;
+    line-height: 2;
+}
+
+.comment-delete {
+    border: none;
+    color: #0726d0;
+    font-size: 11px;
+    // width: 0px;
+    background: none;
+    // display: contents;
+    position: relative;
+    bottom: 25px;
+    left: 5px;
+}
+
+.comment-delete:hover {
+    cursor: pointer;
+}
+
+.pic-comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.pic-comment img{
+    width: 40px;
+    border-radius: 50px;
+    height: 40px;
 
 }

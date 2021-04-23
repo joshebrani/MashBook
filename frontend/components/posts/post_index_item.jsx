@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentFormContainer from '../comments/comment_form_container';
 
         const findDate = (time) => {
             const date = new Date(time);
@@ -40,6 +41,7 @@ const PostIndexItem = (props) => (
       <p>Like</p>
       <p>Comment</p>
     </ul>
+    <CommentFormContainer post={props.post}/>
   </div>
 );
 

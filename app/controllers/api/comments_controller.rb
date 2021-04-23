@@ -1,6 +1,12 @@
 class Api::CommentsController < ApplicationController
     before_action :require_logged_in
 
+
+    # def index
+    #     @comments = Comment.all
+    #     render :index
+    # end
+
     def create
         @comment = Comment.new(comment_params)
         if @comment.save
