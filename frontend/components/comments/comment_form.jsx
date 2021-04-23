@@ -83,14 +83,16 @@ class CommentForm extends React.Component {
                 </span>
               ))
             : null}
-
-          {/* <span className="comment">
+            
+            <span>
+          <span className="comment">
             <p className="comment-name">
               {this.props.comment ? this.props.comment.author : null}
             </p>
             <p className="comment-body">
               {this.props.comment ? this.props.comment.comment : null}
             </p>
+            </span>
             {this.props.comment ? (
               <button
                 className="comment-delete"
@@ -99,7 +101,7 @@ class CommentForm extends React.Component {
                 Delete
               </button>
             ) : null}
-          </span> */}
+          </span>
         </something>
       </something>
     );
