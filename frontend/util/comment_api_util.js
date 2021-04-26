@@ -1,23 +1,23 @@
 export const createComment = (comment) => {
   return $.ajax({
-    method: "POST",
     url: "/api/comments",
+    method: "POST",
     data: { comment },
   });
 };
 
 export const editComment = (comment) => {
   return $.ajax({
-    method: "PATCH",
     url: `/api/comments/${comment.id}`,
+    method: "PATCH",
     data: { comment },
   });
 };
 
-export const deleteComment = (id) => {
+export const deleteComment = (commentId) => {
   return $.ajax({
+    url: `/api/comments/${commentId}`,
     method: "DELETE",
-    url: `/api/comments/${id}`,
   });
 };
 

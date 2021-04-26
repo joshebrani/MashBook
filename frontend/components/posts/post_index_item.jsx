@@ -26,7 +26,9 @@ const PostIndexItem = (props) => (
         : "Mystery Man"}
       {/* Technical Difficulties  */}
     </p>
-    <p className="time-post">{findDate(props.post.created_at)}</p>
+    <p className="time-post">{findDate(props.post.created_at)}
+    <img className = 'earth' src={window.earth} alt=""/>
+    </p>
     <p className="post-body">{props.post.body}</p>
     {props.post.post_author_id === props.currentUser.id ? (
       <button onClick={() => props.destroyPost(props.post.id)}>

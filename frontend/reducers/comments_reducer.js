@@ -1,19 +1,18 @@
 import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
 
-const defaultState = {};
 
-const commentsReducer = (state = defaultState, action) => {
-    Object.freeze(state);
+const commentsReducer = (oldState = {}, action) => {
+    Object.freeze(oldState);
 
     switch (action.type) {
         case RECEIVE_COMMENT:
-            return Object.assign({}, state, action.comment);
+            return Object.assign({}, oldState, action.comment);
         case REMOVE_COMMENT:
-            let newState = Object.assign({}, state);
+            let newState = Object.assign({}, oldState);
             delete newState[action.commentId];
             return Object.assign({}, newState);
         default:
-            return state;
+            return oldState;
     }
 }
 

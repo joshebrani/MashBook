@@ -42,17 +42,23 @@ class NavBar extends React.Component {
           </div>
 
           <div className="h-v-g">
-            <img className="home-icon" src={window.home} alt="" />{" "}
-            <img className="video-icon" src={window.video} alt="" />{" "}
-            <img className="group-icon" src={window.group} alt="" />{" "}
+            <a href="https://www.linkedin.com/in/joshuaebrani/">
+              <img className="home-icon" src={window.blue} alt="" />{" "}
+            </a>
+            <a href="https://angel.co/u/joshua-ebrani">
+              <img className="video-icon" src={window.angel} alt="" />{" "}
+            </a>
+            <a href="https://github.com/joshebrani">
+              <img className="group-icon" src={window.ghub} alt="" />{" "}
+            </a>
             <a href="https://joshebrani.github.io/Defend-My-Food/">
               <img className="game-icon" src={window.game} alt="" />{" "}
             </a>
           </div>
 
           <div className="m-b-d">
-            <img className="messages-icon" src={window.messages} alt="" />{" "}
-            <img className="bell-icon" src={window.bell} alt="" />{" "}
+            <img className="messages-icon" src={window.port} alt="" />{" "}
+            <img className="bell-icon" src={window.black} alt="" />{" "}
             <img className="down-icon" src={window.down} alt="" />{" "}
           </div>
           <div className="logout-nav" onClick={this.logout}>
@@ -71,13 +77,17 @@ class NavBar extends React.Component {
           {/* <p>profile</p> */}
           <p>
             <a href="https://www.linkedin.com/in/joshuaebrani/">
-              <img className="linkedin-icon" src={window.linkedin} alt="" />{" "}
-              Linkedin
+              <img className="linkedin-icon" src={window.lifull} alt="" />{" "}
             </a>
           </p>
           <p>
             <a href="https://github.com/joshebrani">
-              <img className="github-icon" src={window.github} alt="" /> Github
+              <img className="github-icon" src={window.ghubfull} alt="" /> 
+            </a>
+          </p>
+          <p>
+            <a href="">
+              <img className="port-icon" src={window.creator} alt="" /> Meet The Creator
             </a>
           </p>
 

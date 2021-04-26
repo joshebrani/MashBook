@@ -5,93 +5,93 @@ class CommentForm extends React.Component {
     super(props);
     this.state = {
       comment: "",
-      post_id: null,
+      post_id: this.props.post.id,
       comment_author_id: this.props.currentUser.id,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.update = this.update.bind(this);
+    this.handleInput = this.handleInput.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-
-    let newComment = Object.assign({}, this.state);
-    newComment["post_id"] = this.props.post.id;
-    this.props.makeComment(newComment);
-
+    this.props.makeComment(this.state);
     this.setState({ comment: "" });
   }
 
-  update(field) {
+  handleInput(type) {
     return (e) =>
       this.setState({
-        [field]: e.currentTarget.value,
+        [type]: e.currentTarget.value,
       });
   }
 
   render() {
     return (
       <something>
-          <span className='pic-comment'>
-
-        {this.props.currentUser.gender == "Female" ? (
-            <img  src={window.female} alt="" />
-            ) : (
-                <img src={window.male} alt="" />
-                )}
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="Write a comment..."
-            value={this.state.comment}
-            onChange={this.update("comment")}
-            className="comment-form"
+        {/* <span className="pic-comment">
+          {this.props.currentUser.gender == "Female" ? (
+            <img src={window.female} alt="" />
+          ) : (
+            <img src={window.male} alt="" />
+          )}
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              placeholder="Write a comment..."
+              value={this.state.comment}
+              onChange={this.handleInput("comment")}
+              className="comment-form"
             />
-        </form>
-            </span>
+          </form>
+        </span> */}
         <something className="comments">
           {this.props.post.comments
             ? this.props.post.comments.map((comment) => (
-                <span >
-                    <span className='comment'>
-                  <br />
-                  
-                  {/* {
+                <span className='one-more-flex'>
+                  <span className='flex-comment'>
+
+                    {
                       (this.props.authors[
-                          comment.comment_author_id
-                        ].gender = "Female" ? (
-                            <img className="person-icon" src={window.female} alt="" />
-                            ) : (
-                                <img className="person-icon" src={window.male} alt="" />
-                                ))
-                            } */}
-                  <p className="comment-name">
-                    {this.props.authors[comment.comment_author_id].fname +
-                      " " +
-                      this.props.authors[comment.comment_author_id].lname}
-                  </p>
-                  <p className="comment-body">{comment.comment}</p>
+                        comment.comment_author_id
+                      ].gender == "Female" ? (
+                        <img className="person-icon" src={window.female} alt="" />
+                        ) : (
+                          <img className="person-icon" src={window.male} alt="" />
+                          ))
+                        }
+                        </span>
+                  <span className="comment">
+                    <br />
+                    <span className="pic-comment-author">
+
+                    <p className="comment-name">
+                      {this.props.authors[comment.comment_author_id].fname +
+                        " " +
+                        this.props.authors[comment.comment_author_id].lname}
+                    </p>
+                        </span>
+                    <p className="comment-body">{comment.comment}</p>
                   </span>
                   {comment.comment_author_id === this.props.currentUser.id ? (
-                      <button
+                    <button
                       className="comment-delete"
                       onClick={() => this.props.destroyComment(comment.id)}
-                      >
+                    >
                       Delete
                     </button>
                   ) : null}
                 </span>
               ))
             : null}
-            
-            <span>
-          <span className="comment">
-            <p className="comment-name">
-              {this.props.comment ? this.props.comment.author : null}
-            </p>
-            <p className="comment-body">
-              {this.props.comment ? this.props.comment.comment : null}
-            </p>
+
+          <span>
+            <span className="comment">
+              <p className="comment-name">
+                {this.props.comment ? this.props.comment.author : null}
+              </p>
+              <p className="comment-body">
+                {this.props.comment ? this.props.comment.comment : null}
+              </p>
             </span>
             {this.props.comment ? (
               <button
@@ -103,6 +103,22 @@ class CommentForm extends React.Component {
             ) : null}
           </span>
         </something>
+        <span className="pic-comment">
+          {this.props.currentUser.gender == "Female" ? (
+            <img src={window.female} alt="" />
+          ) : (
+            <img src={window.male} alt="" />
+          )}
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              placeholder="Write a comment..."
+              value={this.state.comment}
+              onChange={this.handleInput("comment")}
+              className="comment-form"
+            />
+          </form>
+        </span>
       </something>
     );
   }

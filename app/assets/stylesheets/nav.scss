@@ -83,17 +83,23 @@
 }
 
 .nav-side img {
-    width: 80px;
-    height: 40px;
-    padding-top: 50px ;
+    height: 30px;
+    /* padding-top: 50px; */
     margin-left: 10px;
+    // margin-top: 30px;
+    text-align: center;
+    padding-top: 10px;
 }
 
+
 .nav-side p {
-    font-size: 15px;
-    font-family: sans-serif;
-    margin-bottom: 50px;
+    // font-size: 15px;
+    // font-family: sans-serif;
+    // margin-bottom: 50px;
     margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
 }
 
 .nav-side img:hover {
