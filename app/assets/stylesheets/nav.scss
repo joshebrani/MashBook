@@ -21,10 +21,21 @@
     display: flex;
 }
 .m-s img {
-    width: 100px;
+    // width: 100px;
     height: 50px;
     margin-right: 50px;
     margin-left: 20px;
+}
+
+.search {
+    width: 150px;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: -60px;
+    margin-top: 20px;
+    background: #f0f2f5;
+    border: none;
+    text-align: center;
 }
 
 .h-v-g {
