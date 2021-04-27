@@ -48,16 +48,19 @@ class NavBar extends React.Component {
           </div>
 
           <div className="h-v-g">
-            <a href="https://www.linkedin.com/in/joshuaebrani/">
+            <a href="https://www.linkedin.com/in/joshuaebrani/" target="_blank">
               <img className="home-icon" src={window.blue} alt="" />{" "}
             </a>
-            <a href="https://angel.co/u/joshua-ebrani">
+            <a href="https://angel.co/u/joshua-ebrani" target="_blank">
               <img className="video-icon" src={window.angel} alt="" />{" "}
             </a>
-            <a href="https://github.com/joshebrani">
+            <a href="https://github.com/joshebrani" target="_blank">
               <img className="group-icon" src={window.ghub} alt="" />{" "}
             </a>
-            <a href="https://joshebrani.github.io/Defend-My-Food/">
+            <a
+              href="https://joshebrani.github.io/Defend-My-Food/"
+              target="_blank"
+            >
               <img className="game-icon" src={window.game} alt="" />{" "}
             </a>
           </div>
@@ -82,12 +85,12 @@ class NavBar extends React.Component {
         <div className="nav-side">
           {/* <p>profile</p> */}
           <p>
-            <a href="https://www.linkedin.com/in/joshuaebrani/">
+            <a href="https://www.linkedin.com/in/joshuaebrani/" target="_blank">
               <img className="linkedin-icon" src={window.lifull} alt="" />{" "}
             </a>
           </p>
           <p>
-            <a href="https://github.com/joshebrani">
+            <a href="https://github.com/joshebrani" target="_blank">
               <img className="github-icon" src={window.ghubfull} alt="" />
             </a>
           </p>

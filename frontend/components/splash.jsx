@@ -8,7 +8,7 @@ class Splash extends React.Component {
         return (
           <div>
             <header className="splash">
-              <div className='mash-splash'>
+              <div className="mash-splash">
                 <h1 className="title">MashBook</h1>
                 <p className="desc">
                   Connect with friends and the world around you on Mashbook
@@ -19,8 +19,15 @@ class Splash extends React.Component {
             </header>
             <footer className="splash-footer">
               <p>Facebook Clone by Joshua Ebrani ©</p>
-              <a href="https://www.linkedin.com/in/joshuaebrani/">Linkedin</a>
-              <a href="https://github.com/joshebrani">Github</a>
+              <a
+                href="https://www.linkedin.com/in/joshuaebrani/"
+                target="_blank"
+              >
+                Linkedin
+              </a>
+              <a href="https://github.com/joshebrani" target="_blank">
+                Github
+              </a>
             </footer>
           </div>
         );
