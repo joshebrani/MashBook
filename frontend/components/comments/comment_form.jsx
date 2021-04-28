@@ -25,6 +25,11 @@ class CommentForm extends React.Component {
       });
   }
 
+  // componentDidUpdate() {
+  //   debugger
+  //   (this.props.comment ? this.props.getPost(this.props.comment.post_id) : null)
+  // }
+
   render() {
     return (
       <something>

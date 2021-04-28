@@ -30,6 +30,9 @@ const PostIndexItem = (props) => (
     <img className = 'earth' src={window.earth} alt=""/>
     </p>
     <p className="post-body">{props.post.body}</p>
+
+    <span className='delete-edit-post'>
+
     {props.post.post_author_id === props.currentUser.id ? (
       <button onClick={() => props.destroyPost(props.post.id)}>
         Delete Post
@@ -37,7 +40,8 @@ const PostIndexItem = (props) => (
     ) : null}
     {props.post.post_author_id === props.currentUser.id ? (
       <button onClick={() => props.openModal("Edit Post")}>Edit</button>
-    ) : null}
+      ) : null}
+      </span>
 
     <ul className="like-and-comment">
       <p>Like</p>
