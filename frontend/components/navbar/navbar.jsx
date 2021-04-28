@@ -43,7 +43,7 @@ class NavBar extends React.Component {
               type="text"
               className="search"
               id=""
-              placeholder=" ⬅ View My Portfolio"
+              placeholder=" ⬅ View My Portfolio (coming soon)"
             />
           </div>
 
@@ -66,9 +66,15 @@ class NavBar extends React.Component {
           </div>
 
           <div className="m-b-d">
-            <img className="messages-icon" src={window.port} alt="" />{" "}
-            <img className="bell-icon" src={window.black} alt="" />{" "}
-            <img className="down-icon" src={window.down} alt="" />{" "}
+            <a href="">
+              <img className="messages-icon" src={window.resume} alt="" />{" "}
+            </a>
+            <a href="https://www.linkedin.com/in/joshuaebrani/" target="_blank">
+              <img className="bell-icon" src={window.black} alt="" />{" "}
+            </a>
+            <a href="https://github.com/joshebrani" target="_blank">
+              <img className="down-icon" src={window.ghub} alt="" />{" "}
+            </a>
           </div>
           <div className="logout-nav" onClick={this.logout}>
             <img className="down-icon" src={window.ex} alt="" /> Log Out
@@ -94,17 +100,17 @@ class NavBar extends React.Component {
               <img className="github-icon" src={window.ghubfull} alt="" />
             </a>
           </p>
-          <p>
+          {/* <p>
             <a href="">
               <img className="port-icon" src={window.creator} alt="" /> Meet The
               Creator
             </a>
-          </p>
+          </p> */}
 
-          <p>3</p>
+          {/* <p>3</p>
           <p>4</p>
           <p>5</p>
-          <p>6</p>
+          <p>6</p> */}
         </div>
       </div>
     );
