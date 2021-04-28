@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentFormContainer from '../comments/comment_form_container';
+import { Link } from 'react-router-dom';
 
         const findDate = (time) => {
             const date = new Date(time);
@@ -13,16 +14,19 @@ import CommentFormContainer from '../comments/comment_form_container';
 const PostIndexItem = (props) => (
   <div>
     <p className="poster-name">
+      <Link to={`/users/${props.authors[props.post.post_author_id]}`}>
+
       {props.authors[props.post.post_author_id] &&
       props.authors[props.post.post_author_id].gender === "Female" ? (
         <img className="person-icon" src={window.female} alt="" />
-      ) : (
-        <img className="person-icon" src={window.male} alt="" />
-      )}
+        ) : (
+          <img className="person-icon" src={window.male} alt="" />
+          )}
+          </Link>
       {props.authors[props.post.post_author_id]
         ? props.authors[props.post.post_author_id].fname +
-          " " +
-          props.authors[props.post.post_author_id].lname
+        " " +
+        props.authors[props.post.post_author_id].lname
         : "Mystery Man"}
       {/* Technical Difficulties  */}
     </p>

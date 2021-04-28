@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -54,6 +55,7 @@ class CommentForm extends React.Component {
             ? this.props.post.comments.map((comment) => (
                 <span className='one-more-flex'>
                   <span className='flex-comment'>
+<Link to={`/users/${comment.comment_author_id}`}>
 
                     {
                       (this.props.authors[
@@ -64,6 +66,7 @@ class CommentForm extends React.Component {
                           <img className="person-icon" src={window.male} alt="" />
                           ))
                         }
+                        </Link>
                         </span>
                   <span className="comment">
                     <br />

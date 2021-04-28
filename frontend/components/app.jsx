@@ -7,6 +7,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils'
 import Modal from './modal/modal'
 import NewsfeedContainer from '../components/newsfeed/newsfeed_container';
 // import EditPostFormContainer from '../components/posts/edit/edit_post_form_container';
+import ProfileContainer from '../components/profile/profile_container';
 
 const App = () => (
   <div>
@@ -14,6 +15,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute path="/feed" component={NewsfeedContainer} />
       <AuthRoute exact path="/" component={Splash} />
+      <ProtectedRoute path="/users/:userId" component={ProfileContainer} />
       {/* <Route path="/posts/:postId/edit" component={EditPostFormContainer} /> */}
     </Switch>
   </div>
