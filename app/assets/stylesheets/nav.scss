@@ -27,8 +27,12 @@
     margin-left: 20px;
 }
 
+.search-icon {
+    z-index: 100;
+}
+
 .search {
-    width: 150px;
+    width: 230px;
     border-radius: 20px;
     height: 30px;
     margin-left: -60px;
@@ -44,8 +48,8 @@
 
 .h-v-g img{
     // margin-left: 30px;
-    padding-right: 30px;
-    padding-left: 30px;
+    // padding-right: 30px;
+    // padding-left: 30px;
 }
 
 .m-b-d {
@@ -53,7 +57,7 @@
 }
 
 .m-b-d img{
-    margin-right: 50px;
+    // margin-right: 50px;
     background: #f0f2f5;
     border-radius: 50px;
 }
@@ -132,6 +136,7 @@
     // height: 20px;
     height: 30px;
     padding: 10px;
+        margin-left: -120px;
 }
 
 .logout-nav:hover {

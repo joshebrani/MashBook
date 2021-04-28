@@ -67,7 +67,7 @@ class NavBar extends React.Component {
 
           <div className="m-b-d">
             <a href="">
-              <img className="messages-icon" src={window.resume} alt="" />{" "}
+              <img className="messages-icon" src={window.resume1} alt="" />{" "}
             </a>
             <a href="https://www.linkedin.com/in/joshuaebrani/" target="_blank">
               <img className="bell-icon" src={window.black} alt="" />{" "}
