@@ -135,7 +135,7 @@
     display: flex;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgray;
-    margin-top: 40px;
+    margin-top: 20px;
     justify-content: space-around;
     color: #a2a1a1;
 }
@@ -158,6 +158,9 @@
 .post-body {
     font-size: 15px;
     padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .poster-name {
@@ -168,17 +171,29 @@
 
 .contacts {
     position: absolute;
-    left: 1360px;
+    left: 1300px;
+    z-index: 1;
 }
 
 .contacts h1 {
     font-size: 20px;
     color: #8e8e8e;
     font-family: sans-serif;
+    position: relative;
+    left: 15px;
 }
 
 .contacts p {
     padding: 10px;
+}
+
+.user-contact a {
+    display: flex;
+    align-items: center;
+}
+
+.user-contact a img {
+    padding-right: 3px;
 }
 
 .time-post {
@@ -213,11 +228,10 @@
     flex-direction: column;
     background: #f0f2f5;
     border-radius: 20px;
-    // margin-bottom: 20px;
     margin-top: 5px;
     width: fit-content;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    /* padding-top: 5px; */
+    padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 10px;
 }
@@ -275,4 +289,25 @@
     border-radius: 50px;
     height: 40px;
 
+}
+
+// .delete-edit-post {
+//     position: relative;
+//     left: 600px;
+//     bottom: 80px;
+//     display: flex;
+//     flex-direction: column;
+//     width: 100px;
+// }
+
+.poster-button {
+    border: none;
+    height: 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.poster-button:hover {
+    cursor: pointer;
 }

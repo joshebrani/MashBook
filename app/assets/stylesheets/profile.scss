@@ -1,0 +1,93 @@
+.profile-icon {
+    height: 200px ;
+    border-radius: 100px;
+    border: 8px solid white;
+}
+
+.full-profile {
+    position: relative;
+    // left: 700px;
+    // top: 200px;
+}
+
+.pic-name {
+        text-align: center;
+    position: relative;
+    right: 400px;
+}
+
+.white {
+    position: relative;
+    /* left: 700px; */
+    /* top: 100px; */
+    /* width: 100%; */
+    background: white;
+    padding-left: 700px;
+    padding-top: 200px;
+}
+
+.profile-name {
+    position: relative;
+    left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.under-name {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.about-stuff {
+   display: flex;
+    justify-content: space-between;
+    width: 400px;
+    position: relative;
+    /* padding: 40px; */
+    color: gray;
+    right: 445px;
+}
+
+.about-stuff li:hover {
+    cursor: pointer;
+
+}
+
+.profile-break {
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    position: relative;
+    right: 400px;
+    margin-top: 40px;
+}
+
+.add-story {
+    background-color: #1877f2;
+    color: white;
+    border-radius: 6px;
+    /* font-size: 20px; */
+    /* line-height: 48px; */
+    height: 40px;
+    margin: 10px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.edit-profile {
+    font-size: 16px; 
+    /* color: black; */
+    font-weight: bold;
+    /* height: 40px; */
+    /* width: 150px; */
+    /* margin-bottom: 5px; */
+    /* position: absolute; */
+    border-radius: 6px;
+    /* bottom: 10px; */
+    /* right: 10px; */
+    background-color: #f2f2f2;
+    padding: 10px;
+    /* transition: filter 0.2s; */
+    border: none;
+}
