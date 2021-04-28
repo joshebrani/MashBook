@@ -22,12 +22,12 @@ const PostIndexItem = (props) => (
         ) : (
           <img className="person-icon" src={window.male} alt="" />
           )}
-          </Link>
       {props.authors[props.post.post_author_id]
         ? props.authors[props.post.post_author_id].fname +
         " " +
         props.authors[props.post.post_author_id].lname
         : "Mystery Man"}
+        </Link>
       {/* Technical Difficulties  */}
     </p>
     <p className="time-post">{findDate(props.post.created_at)}
