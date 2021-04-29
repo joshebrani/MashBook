@@ -4,11 +4,10 @@ import React from "react";
 class EditPostForm extends React.Component {
   constructor(props) {
     super(props);
-    // debugger
-
+    
     this.state = {
       id: this.props.postId,
-      body: "",
+      body: this.props.posts[this.props.postId].body,
       post_author_id: this.props.post_author_id,
       wall_id: this.props.wall_id,
     };

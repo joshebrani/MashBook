@@ -53,7 +53,7 @@ const PostIndexItem = (props) => (
             className="poster-button"
             onClick={() => props.openModal("Edit Post", props.post.id)}
           >
-            Edit
+            Edit Post
           </button>
         ) : null}
       </span>
