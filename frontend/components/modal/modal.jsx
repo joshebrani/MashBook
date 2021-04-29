@@ -6,11 +6,12 @@ import CreatePostFormContainer from '../posts/create/create_post_form_container'
 import EditPostFormContainer from '../posts/edit/edit_post_form_container';
 
 function Modal({ modal, closeModal }) {
+  debugger
   if (!modal) {
     return null;
   }
   let component;
-  switch (modal) {
+  switch (modal.modal) {
     case "signup":
       component = <SignupFormContainer />;
       break;
@@ -18,7 +19,7 @@ function Modal({ modal, closeModal }) {
       component = <CreatePostFormContainer />;
       break;
     case "Edit Post":
-      component = <EditPostFormContainer />;
+      component = <EditPostFormContainer postId={modal.id}/>;
       break;
     default:
       return null;

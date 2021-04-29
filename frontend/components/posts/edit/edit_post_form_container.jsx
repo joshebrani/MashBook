@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { editPost } from "../../../actions/post_actions";
 import { openModal, closeModal } from "../../../actions/modal_actions";
+import { getPosts } from '../../../actions/post_actions';
 import { withRouter } from 'react-router-dom';
 import EditPostForm from "./edit_post_form";
 
@@ -19,6 +20,7 @@ const mdtp = (dispatch) => {
     openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
     editPost: (post) => dispatch(editPost(post)),
+    getPosts: () => dispatch(getPosts()),
   };
 };
 

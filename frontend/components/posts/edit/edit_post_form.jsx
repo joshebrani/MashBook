@@ -7,6 +7,7 @@ class EditPostForm extends React.Component {
     // debugger
 
     this.state = {
+      id: this.props.postId,
       body: "",
       post_author_id: this.props.post_author_id,
       wall_id: this.props.wall_id,
@@ -26,13 +27,13 @@ class EditPostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.editPost(this.state);
-    // this.setState({ body: "" });
+    this.props.editPost(this.state).then(() => this.props.getPosts());
+    this.setState({ body: "" });
     this.props.closeModal();
   }
 
   render() {
-    // debugger
+    debugger
     return (
       <section className="modal-background">
         <form className="modal-child">

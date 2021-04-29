@@ -51,7 +51,7 @@ const PostIndexItem = (props) => (
         {props.post.post_author_id === props.currentUser.id ? (
           <button
             className="poster-button"
-            onClick={() => props.openModal("Edit Post")}
+            onClick={() => props.openModal("Edit Post", props.post.id)}
           >
             Edit
           </button>

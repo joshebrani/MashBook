@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { makeComment, destroyComment } from "../../actions/comment_actions";
-import { getPost } from '../../actions/post_actions';
+import { getPost, getPosts } from '../../actions/post_actions';
 import CommentForm from "./comment_form";
 // import { withRouter } from 'react-router-dom';
 
@@ -17,7 +17,8 @@ const mdtp = (dispatch) => {
   return {
     makeComment: (comment) => dispatch(makeComment(comment)),
     destroyComment: (id) => dispatch(destroyComment(id)),
-    getPost: (postId) => dispatch(getPost(postId))
+    getPost: (postId) => dispatch(getPost(postId)),
+    getPosts: () => dispatch(getPosts())
   };
 };
 

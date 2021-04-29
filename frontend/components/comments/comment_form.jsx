@@ -11,11 +11,12 @@ class CommentForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.makeComment(this.state);
+    this.props.makeComment(this.state).then(() => this.props.getPosts());
     this.setState({ comment: "" });
   }
 
@@ -24,6 +25,11 @@ class CommentForm extends React.Component {
       this.setState({
         [type]: e.currentTarget.value,
       });
+  }
+
+  handleDelete(id) {
+    // e.preventDefault();
+    this.props.destroyComment(id).then(() => this.props.getPosts());
   }
 
   // componentDidUpdate() {
@@ -53,37 +59,36 @@ class CommentForm extends React.Component {
         <something className="comments">
           {this.props.post.comments
             ? this.props.post.comments.map((comment) => (
-                <span className='one-more-flex'>
-                  <span className='flex-comment'>
-<Link to={`/users/${comment.comment_author_id}`}>
-
-                    {
-                      (this.props.authors[
-                        comment.comment_author_id
-                      ].gender == "Female" ? (
-                        <img className="person-icon" src={window.female} alt="" />
-                        ) : (
-                          <img className="person-icon" src={window.male} alt="" />
-                          ))
-                        }
-                        </Link>
-                        </span>
+                <span className="one-more-flex">
+                  <span className="flex-comment">
+                    <Link to={`/users/${comment.comment_author_id}`}>
+                      {this.props.authors[comment.comment_author_id].gender ==
+                      "Female" ? (
+                        <img
+                          className="person-icon"
+                          src={window.female}
+                          alt=""
+                        />
+                      ) : (
+                        <img className="person-icon" src={window.male} alt="" />
+                      )}
+                    </Link>
+                  </span>
                   <span className="comment">
                     <br />
                     <span className="pic-comment-author">
-
-                    <p className="comment-name">
-                      {this.props.authors[comment.comment_author_id].fname +
-                        " " +
-                        this.props.authors[comment.comment_author_id].lname}
-                    </p>
-                        </span>
+                      <p className="comment-name">
+                        {this.props.authors[comment.comment_author_id].fname +
+                          " " +
+                          this.props.authors[comment.comment_author_id].lname}
+                      </p>
+                    </span>
                     <p className="comment-body">{comment.comment}</p>
                   </span>
                   {comment.comment_author_id === this.props.currentUser.id ? (
                     <button
                       className="comment-delete"
-                      onClick={() => this.props.destroyComment(comment.id)}
+                      onClick={() => this.handleDelete(comment.id)}
                     >
                       Delete
                     </button>
@@ -92,7 +97,7 @@ class CommentForm extends React.Component {
               ))
             : null}
 
-          <span>
+          {/* <span>
             <span className="comment">
               <p className="comment-name">
                 {this.props.comment ? this.props.comment.author : null}
@@ -109,7 +114,7 @@ class CommentForm extends React.Component {
                 Delete
               </button>
             ) : null}
-          </span>
+          </span> */}
         </something>
         <span className="pic-comment">
           {this.props.currentUser.gender == "Female" ? (

@@ -18,7 +18,7 @@ const mdtp = (dispatch) => ({
   getPosts: () => dispatch(getPosts()),
   destroyPost: (postId) => dispatch(destroyPost(postId)),
   getUsers: () => dispatch(getUsers()),
-  openModal: (modal) => dispatch(openModal(modal)),
+  openModal: (modal, id) => dispatch(openModal(modal, id)),
   closeModal: () => dispatch(closeModal()),
 });
 
