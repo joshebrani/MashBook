@@ -66,6 +66,19 @@ class NavBar extends React.Component {
           </div>
 
           <div className="m-b-d">
+            <div className="profile-nav">
+              <Link
+                className="flex-profle"
+                to={`/users/${this.props.currentUser.user.id}`}
+              >
+                {this.props.currentUser.user.gender === "Female" ? (
+                  <img className="nobg" src={window.female} alt="" />
+                ) : (
+                  <img className="nobg" src={window.male} alt="" />
+                )}
+                <p>{this.props.currentUser.user.fname}</p>
+              </Link>
+            </div>
             <a href="">
               <img className="messages-icon" src={window.resume1} alt="" />{" "}
             </a>

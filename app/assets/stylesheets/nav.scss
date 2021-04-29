@@ -54,6 +54,7 @@
 
 .m-b-d {
     margin: 7px;
+    display: flex;
 }
 
 .m-b-d img{
@@ -145,4 +146,19 @@
     // color: rgb(25, 114, 216);
     // border-bottom: 3px solid rgb(25, 114, 216);
     border-radius: 6px;
+}
+
+.profile-nav {
+    display: flex;
+}
+
+.flex-profile {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nobg {
+    background: none;
 }
