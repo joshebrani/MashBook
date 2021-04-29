@@ -30,8 +30,8 @@
     height: 60px;
     font-size: 25px;
     position: relative;
-    top: 200px;
-    left: 400px;
+    top: 150px;
+    left: 390px;
     padding: 20px;
     border: 1px solid #c1c0c0;
 }
@@ -109,7 +109,7 @@
 
 
 .after-post {
-    top: 300px;
+    top: 250px;
     left: 405px;
     position: relative;
 }
@@ -170,9 +170,12 @@
 }
 
 .contacts {
-    position: absolute;
+    position: fixed;
     left: 1300px;
+    top: 150px;
     z-index: 1;
+    border-top: 1px solid #b1adad;
+    padding: 20px;
 }
 
 .contacts h1 {
