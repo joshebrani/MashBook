@@ -20,6 +20,7 @@ class UserSidebar extends React.Component {
         const { users } = this.props
         return (
           <div>
+            <div className='break'></div>
             <h1>Contacts</h1>
             {users.map((user) => (
               <p className="user-contact" key={user.id}>

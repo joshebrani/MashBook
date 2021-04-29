@@ -33,7 +33,7 @@ class EditPostForm extends React.Component {
   }
 
   render() {
-    debugger
+    // debugger
     return (
       <section className="modal-background">
         <form className="modal-child">
