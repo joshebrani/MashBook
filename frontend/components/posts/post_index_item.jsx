@@ -2,7 +2,7 @@ import React from 'react';
 import CommentFormContainer from '../comments/comment_form_container';
 import { Link } from 'react-router-dom';
 
-        const findDate = (time) => {
+        export const findDate = (time) => {
             const date = new Date(time);
             return date.toDateString() + " at " + date.toLocaleTimeString();
             }

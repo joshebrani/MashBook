@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import NavbarContainer from '../navbar/navbar_container';
 import { Link } from "react-router-dom";
+import ProfilePostsContainer from './profile_posts_container';
 
 // import PostIndexContainer from '../posts/post_index_container';
 
@@ -62,6 +63,12 @@ class Profile extends React.Component {
             //  <div>{post.body}</div>
             <PostIndexContainer post={post}/>
               )) : null} */}
+
+              <div>
+                <ProfilePostsContainer user={this.props.user} key={this.props.user.id}/>
+              </div>
+
+
               <div className='photo-grid'>
 
               <h1 className='photo-head'>Photos</h1>

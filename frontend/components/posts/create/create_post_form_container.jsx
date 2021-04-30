@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import { makePost } from '../../../actions/post_actions';
+import { makePost, getPosts } from '../../../actions/post_actions';
 import {openModal, closeModal } from '../../../actions/modal_actions';
 // import { withRouter } from 'react-router-dom';
 import CreatePostForm from './create_post_form';
-
 
 const mstp = (state, ownProps) => {
     return {
@@ -20,7 +19,8 @@ const mdtp = dispatch => {
     return {
       openModal: (modal) => dispatch(openModal(modal)),
       closeModal: () => dispatch(closeModal()),
-      makePost: (post) => dispatch(makePost(post))
+      makePost: (post) => dispatch(makePost(post)),
+      getPosts: () => dispatch(getPosts()),
     };
 }
 
