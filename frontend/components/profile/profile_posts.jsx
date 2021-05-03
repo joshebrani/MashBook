@@ -9,29 +9,32 @@ class ProfilePosts extends React.Component {
     // debugger
     super(props);
 
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-//   handleClick(e) {
-//     e.preventDefault();
-//     this.props.openModal("Create Post");
-//   }
+  handleClick(e) {
+    e.preventDefault();
+    this.props.openModal("Create Post");
+  }
 
   render() {
     return (
       <div>
-        {/* <div className="around-the-form">
+        {this.props.currentUser.user.id == this.props.user.id ? 
+        <div className="around-the-form">
           
             {this.props.currentUser.user.gender === "Female" ? (
               <img className="person-icon-form" src={window.female} alt="" />
-            ) : (
-              <img className="person-icon-form" src={window.male} alt="" />
-            )}
+              ) : (
+                <img className="person-icon-form" src={window.male} alt="" />
+                )}
     
           <div onClick={this.handleClick} className="open-post-form">
             <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
           </div>
-        </div> */}
+        </div> :
+        <p className='around-the-form'>{`You will be able to post on ${this.props.user.fname}'s wall soon`}</p>
+              }
         <div>
           {this.props.user.posts.length > 0 ? (
             <div className="after-post-profile">

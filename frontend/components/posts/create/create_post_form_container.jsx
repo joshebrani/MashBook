@@ -3,6 +3,7 @@ import { makePost, getPosts } from '../../../actions/post_actions';
 import {openModal, closeModal } from '../../../actions/modal_actions';
 // import { withRouter } from 'react-router-dom';
 import CreatePostForm from './create_post_form';
+import { getUsers } from '../../../actions/user_actions';
 
 const mstp = (state, ownProps) => {
     return {
@@ -21,6 +22,7 @@ const mdtp = dispatch => {
       closeModal: () => dispatch(closeModal()),
       makePost: (post) => dispatch(makePost(post)),
       getPosts: () => dispatch(getPosts()),
+      getUsers: () => dispatch(getUsers()),
     };
 }
 
