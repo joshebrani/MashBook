@@ -11,25 +11,24 @@ import { Link } from 'react-router-dom';
         // let randomNum = Math.floor(Math.random() * arr.length);
         // let randomImage = arr[randomNum]
 
+
 const PostIndexItem = (props) => (
   <div>
     <p className="poster-name">
       {props.authors[props.post.post_author_id] ? (
-
-      <Link to={`/users/${props.authors[props.post.post_author_id].id}`}>
-        {
-        props.authors[props.post.post_author_id].gender === "Female" ? (
-          <img className="person-icon" src={window.female} alt="" />
-        ) : (
-          <img className="person-icon" src={window.male} alt="" />
-        )}
-        { props.authors[props.post.post_author_id].fname +
+        <Link to={`/users/${props.authors[props.post.post_author_id].id}`}>
+          {props.authors[props.post.post_author_id].gender === "Female" ? (
+            <img className="person-icon" src={window.female} alt="" />
+          ) : (
+            <img className="person-icon" src={window.male} alt="" />
+          )}
+          {props.authors[props.post.post_author_id].fname +
             " " +
-            props.authors[props.post.post_author_id].lname
-          }
-      </Link>
-      ) : ( "Mystery Man") 
-      }
+            props.authors[props.post.post_author_id].lname}
+        </Link>
+      ) : (
+        "Mystery Man"
+      )}
       {/* Technical Difficulties  */}
     </p>
     <p className="time-post">
@@ -43,7 +42,9 @@ const PostIndexItem = (props) => (
         {props.post.post_author_id === props.currentUser.id ? (
           <button
             className="poster-button"
-            onClick={() => props.destroyPost(props.post.id)}
+            onClick={() =>
+              props.destroyPost(props.post.id).then(() => props.getPosts())
+            }
           >
             Delete Post
           </button>

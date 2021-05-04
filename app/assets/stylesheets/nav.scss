@@ -42,6 +42,13 @@
     text-align: center;
 }
 
+.search:focus {
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+    outline-offset: 0px;
+    outline: none;
+}
+
 .h-v-g {
     margin: 7px;
 }
@@ -157,11 +164,12 @@
     /* flex-direction: row; */
     /* justify-content: space-between; */
     align-items: center;
-    width: 100px;
+    /* width: 100px; */
     margin-right: -100px;
     height: 47px;
     font-weight: bold;
     margin-top: 10px;
+    padding-right: 5px;
 }
 
 .flex-profile:hover {

@@ -8,7 +8,6 @@ import ProfilePostsContainer from './profile_posts_container';
 
 class Profile extends React.Component {
     constructor(props) {
-        // debugger
         super(props);
 
     }
@@ -68,6 +67,7 @@ class Profile extends React.Component {
                 <ProfilePostsContainer user={this.props.user} key={this.props.user.id}/>
               </div>
 
+<div className='profile-pics-friends'>
 
               <div className='photo-grid'>
 
@@ -99,6 +99,7 @@ class Profile extends React.Component {
               </div>
             </div>
           </div>
+                </div>
         );
     }
 }

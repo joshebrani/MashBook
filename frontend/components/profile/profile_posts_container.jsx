@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 import ProfilePosts from "./profile_posts";
-import { getUsers } from "../../actions/user_actions";
+import { getUsers, getUser } from "../../actions/user_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
+import { getPosts, destroyPost } from '../../actions/post_actions';
 
 
 const mstp = (state, ownProps) => {
@@ -16,8 +17,11 @@ const mstp = (state, ownProps) => {
 const mdtp = (dispatch) => {
   return {
     getUsers: () => dispatch(getUsers()),
+    getUser: (id) => dispatch(getUser(id)),
+    getPosts: () => dispatch(getPosts()),
     openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
+    destroyPost: (id) => dispatch(destroyPost(id)),
   };
 };
 

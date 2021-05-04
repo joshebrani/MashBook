@@ -28,7 +28,6 @@ class NavBar extends React.Component {
   // }
 
   render() {
-    // debugger
     return (
       <div>
         <div className="nav-top">
@@ -51,9 +50,6 @@ class NavBar extends React.Component {
             <a href="https://www.linkedin.com/in/joshuaebrani/" target="_blank">
               <img className="home-icon" src={window.blue} alt="" />{" "}
             </a>
-            <a href="https://angel.co/u/joshua-ebrani" target="_blank">
-              <img className="video-icon" src={window.angel} alt="" />{" "}
-            </a>
             <a href="https://github.com/joshebrani" target="_blank">
               <img className="group-icon" src={window.ghub} alt="" />{" "}
             </a>
@@ -62,6 +58,9 @@ class NavBar extends React.Component {
               target="_blank"
             >
               <img className="game-icon" src={window.game} alt="" />{" "}
+            </a>
+            <a href="https://angel.co/u/joshua-ebrani" target="_blank">
+              <img className="video-icon" src={window.angel} alt="" />{" "}
             </a>
           </div>
 

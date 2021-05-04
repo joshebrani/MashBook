@@ -6,7 +6,7 @@ class CommentForm extends React.Component {
     super(props);
     this.state = {
       comment: "",
-      post_id: this.props.post.id,
+      post_id: this.props.post ? this.props.post.id : null,
       comment_author_id: this.props.currentUser.id,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,7 +33,6 @@ class CommentForm extends React.Component {
   }
 
   // componentDidUpdate() {
-  //   debugger
   //   (this.props.comment ? this.props.getPost(this.props.comment.post_id) : null)
   // }
 
@@ -57,7 +56,7 @@ class CommentForm extends React.Component {
           </form>
         </span> */}
         <something className="comments">
-          {this.props.post.comments
+          {this.props.post && this.props.post.comments
             ? this.props.post.comments.map((comment) => (
                 <span className="one-more-flex">
                   <span className="flex-comment">

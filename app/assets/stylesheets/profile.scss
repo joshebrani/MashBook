@@ -105,6 +105,8 @@
     margin-top: 100px;
     border-radius: 10px;
     box-shadow: 3px 3px 1px #dad8d8;
+    bottom: 100px;
+    position: relative;
 }
 
 .photos img {
@@ -127,8 +129,8 @@
 }
 
 .friend-pic {
-    display: flex;
     color: #444444;
+    text-align: center;
 }
 
 .friends-box {
@@ -144,12 +146,15 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 1px #dad8d8;
+    position: relative;
+    bottom: 120px;
 }
 
  .after-post-profile {
     top: 950px;
     right: 105px;
     position: absolute;
+    z-index: 8;
  }
 
   .after-post-profile > div {
@@ -162,3 +167,24 @@
         border-radius: 10px;
         margin-bottom: 50px;
 }  
+
+.around-the-form-profile {
+    background: white;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    width: 700px;
+    height: 60px;
+    font-size: 25px;
+    position: relative;
+    top: 50px;
+    left: 745px;
+    padding: 20px;
+    border: 1px solid #c1c0c0;
+}
+
+.profile-pics-friends {
+    position: relative;
+    left: 100px;
+    bottom: 50px;
+}

@@ -6,7 +6,6 @@ import CreatePostFormContainer from '../posts/create/create_post_form_container'
 import EditPostFormContainer from '../posts/edit/edit_post_form_container';
 
 function Modal({ modal, closeModal }) {
-  // debugger
   if (!modal) {
     return null;
   }
