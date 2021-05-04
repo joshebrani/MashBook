@@ -29,6 +29,7 @@ MashBook, hosted on heroku, uses Ruby on Rails as its backend API, PostgreSQL fo
 
 ![Screen Shot 2021-05-04 at 10.00.12 AM[image]](https://user-images.githubusercontent.com/75503365/117016102-600b8c80-acc0-11eb-8968-cad6befa1906.png)
 
+MashBook, like many other social media applications, allows users to create profiles, posts, and comments.
 
 ![Screen Shot 2021-05-04 at 10.00.36 AM[image]](https://user-images.githubusercontent.com/75503365/117016167-70bc0280-acc0-11eb-9b1e-285be9a1496d.png)
 
