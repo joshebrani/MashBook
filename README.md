@@ -4,7 +4,7 @@
 
 [Live Site](https://mashbook.herokuapp.com/)
 
-![Screen Shot 2021-03-26 at 10.38.43 AM![image]](https://user-images.githubusercontent.com/75503365/112648801-42751880-8e20-11eb-9859-9db00159d126.png)
+![Screen Shot 2021-05-04 at 9.58.50 AM[image]](https://user-images.githubusercontent.com/75503365/117015987-3f433700-acc0-11eb-88cc-ed6ddde8eeb3.png)
 
 
 ## Teachnologies Used
@@ -20,10 +20,15 @@
 * HTML
 * CSS
 
-![Screen Shot 2021-03-26 at 10.39.07 AM![image]](https://user-images.githubusercontent.com/75503365/112649156-8e27c200-8e20-11eb-845e-a15e00ce2617.png)
+![Screen Shot 2021-05-04 at 9.59.09 AM[image]](https://user-images.githubusercontent.com/75503365/117016052-5124da00-acc0-11eb-8284-89a37936e845.png)
+
 
 ## Brief Overview
 
 MashBook, hosted on heroku, uses Ruby on Rails as its backend API, PostgreSQL for it's database, React and Redux to manage rendering its frontend, jbuilder to send content from the backend to frontend, and CSS for the styling.
 
-![Screen Shot 2021-03-30 at 5.17.27 PM![image]](https://user-images.githubusercontent.com/75503365/113058270-ef7ec680-917b-11eb-9c7d-5419af907122.png)
+![Screen Shot 2021-05-04 at 10.00.12 AM[image]](https://user-images.githubusercontent.com/75503365/117016102-600b8c80-acc0-11eb-8968-cad6befa1906.png)
+
+
+![Screen Shot 2021-05-04 at 10.00.36 AM[image]](https://user-images.githubusercontent.com/75503365/117016167-70bc0280-acc0-11eb-9b1e-285be9a1496d.png)
+
