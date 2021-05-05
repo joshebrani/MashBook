@@ -102,11 +102,12 @@
     // background: rgb(240, 239, 239);
     margin-top: 80px;
     position: fixed;
+    z-index: 20;
     
 }
 
 .nav-side img {
-    height: 30px;
+    // height: 30px;
     /* padding-top: 50px; */
     margin-left: 10px;
     // margin-top: 30px;
@@ -114,6 +115,15 @@
     padding-top: 10px;
 }
 
+.linkedin-icon {
+    height: 35px;
+    padding-top: 10px;
+}
+
+.github-icon {
+    height: 40px;
+    padding-top: 10px;
+}
 
 .nav-side p {
     // font-size: 15px;
@@ -181,4 +191,9 @@
 
 .nobg {
     background: none;
+}
+
+.defend-icon {
+    height: 60px;
+    // margin-top: -20px;
 }

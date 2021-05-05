@@ -76,6 +76,8 @@ class Profile extends React.Component {
                 <div className='photos'>
                 <img  src={window.doge} alt="" />
                 <img  src={window.liu} alt="" />
+                <img  src={window.me} alt="" />
+                <img  src={window.berim} alt="" />
                 </div>
               ) : null}
               </div>

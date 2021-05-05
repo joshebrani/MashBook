@@ -64,20 +64,19 @@ class NavBar extends React.Component {
             </a>
           </div>
 
-              <Link
-                className="flex-profile"
-                to={`/users/${this.props.currentUser.user.id}`}
-              >
-                {this.props.currentUser.user.gender === "Female" ? (
-                  <img className="nobg" src={window.female} alt="" />
-                ) : (
-                  <img className="nobg" src={window.male} alt="" />
-                )}
-                <p>{this.props.currentUser.user.fname}</p>
-              </Link>
+          <Link
+            className="flex-profile"
+            to={`/users/${this.props.currentUser.user.id}`}
+          >
+            {this.props.currentUser.user.gender === "Female" ? (
+              <img className="nobg" src={window.female} alt="" />
+            ) : (
+              <img className="nobg" src={window.male} alt="" />
+            )}
+            <p>{this.props.currentUser.user.fname}</p>
+          </Link>
           <div className="m-b-d">
-            <div className="profile-nav">
-            </div>
+            <div className="profile-nav"></div>
             <a href="">
               <img className="messages-icon" src={window.resume1} alt="" />{" "}
             </a>
@@ -110,6 +109,14 @@ class NavBar extends React.Component {
           <p>
             <a href="https://github.com/joshebrani" target="_blank">
               <img className="github-icon" src={window.ghubfull} alt="" />
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://joshebrani.github.io/Defend-My-Food/"
+              target="_blank"
+            >
+              <img className="defend-icon" src={window.defend} alt="" />
             </a>
           </p>
           {/* <p>
