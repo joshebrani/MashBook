@@ -194,6 +194,7 @@ position: relative;
     left: 150px;
     /* bottom: 355px; */
     top: 70px;
+    z-index: 7;
 }
 
 body {
@@ -216,10 +217,6 @@ body {
     margin-bottom: 200px;
 }
 
-.pro-around-not-user {
-    position: relative;
-    bottom: 470px;
-}
 
 .pro-around-user {
     position: relative;

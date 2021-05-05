@@ -60,13 +60,13 @@ class Profile extends React.Component {
             <div className="profile-pics-friends">
               <div className="photo-grid">
                 <h1 className="photo-head">Photos</h1>
-                {this.props.user.fname == "Josh" ||
-                this.props.user.fname == "Demo" ? (
+                {/* {this.props.user.fname == "Josh" ||
+                this.props.user.fname == "Demo" ? ( */}
                   <div className="photos">
                     <img src={window.doge} alt="" />
                     <img src={window.liu} alt="" />
                   </div>
-                ) : null}
+                {/* ) : null} */}
               </div>
 
               <div className="friends-box">
