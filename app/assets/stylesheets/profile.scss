@@ -157,7 +157,7 @@ border: 1px solid lightgray;
 }
 
  .after-post-profile {
-     top: 150px;
+    bottom: 900px;
     left: 750px;
     position: relative;
     z-index: 8;
@@ -183,19 +183,36 @@ border: 1px solid lightgray;
     height: 60px;
     font-size: 25px;
     position: relative;
-    top: 50px;
+    bottom: 1000px;
     left: 745px;
     padding: 20px;
     border: 1px solid #c1c0c0;
 }
 
 .profile-pics-friends {
-    position: relative;
-    left: 100px;
-    bottom: 355px;
+position: relative;
+    left: 150px;
+    /* bottom: 355px; */
+    top: 70px;
 }
 
 body {
         overflow-x: hidden;
+}
+
+.around-the-form-profile-2 {
+    position: relative;
+    bottom: 800px;
+    background: white;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    width: 700px;
+    height: 60px;
+    font-size: 25px;
+    left: 745px;
+    padding: 20px;
+    border: 1px solid #c1c0c0;
+    margin-bottom: 200px;
 }
 

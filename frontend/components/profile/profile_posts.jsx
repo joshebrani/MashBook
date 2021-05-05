@@ -38,7 +38,7 @@ class ProfilePosts extends React.Component {
             </div>
           </div>
         ) : (
-          <p className="around-the-form-profile">{`You will be able to post on ${this.props.user.fname}'s wall soon`}</p>
+          <p className="around-the-form-profile-2">{`You will be able to post on ${this.props.user.fname}'s wall soon`}</p>
         )}
         <div>
           {this.props.user.posts.length > 0 ? (

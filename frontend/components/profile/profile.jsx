@@ -57,6 +57,44 @@ class Profile extends React.Component {
                 </div>
               </div>
             </div>
+            <div className="profile-pics-friends">
+              <div className="photo-grid">
+                <h1 className="photo-head">Photos</h1>
+                {this.props.user.fname == "Josh" ||
+                this.props.user.fname == "Demo" ? (
+                  <div className="photos">
+                    <img src={window.doge} alt="" />
+                    <img src={window.liu} alt="" />
+                  </div>
+                ) : null}
+              </div>
+
+              <div className="friends-box">
+                <h1 className="photo-head">Users</h1>
+                <div className="friends-grid">
+                  {this.props.users.map((user) => (
+                    <div className="friend-pic">
+                      <Link to={`/users/${user.id}`}>
+                        {user.gender == "Female" ? (
+                          <img
+                            className="person-icon-form"
+                            src={window.female}
+                            alt=""
+                          />
+                        ) : (
+                          <img
+                            className="person-icon-form"
+                            src={window.male}
+                            alt=""
+                          />
+                        )}
+                        <p>{user.fname + " " + user.lname}</p>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             <div>
               {/* {this.props.user.posts ? this.props.user.posts.map((post) => (
             //  <div>{post.body}</div>
@@ -64,43 +102,13 @@ class Profile extends React.Component {
               )) : null} */}
 
               <div>
-                <ProfilePostsContainer user={this.props.user} key={this.props.user.id}/>
-              </div>
-
-<div className='profile-pics-friends'>
-
-              <div className='photo-grid'>
-
-              <h1 className='photo-head'>Photos</h1>
-              {this.props.user.fname == "Josh" || this.props.user.fname == "Demo"  ? (
-                <div className='photos'>
-                <img  src={window.doge} alt="" />
-                <img  src={window.liu} alt="" />
-
-                </div>
-              ) : null}
-              </div>
-
-                <div className='friends-box'>
-
-                <h1 className='photo-head'>Users</h1>
-              <div className='friends-grid'>
-                {this.props.users.map((user) => (
-                  <div className='friend-pic'>
-                    <Link to={`/users/${user.id}`}>
-                  {user.gender == "Female" ? 
-                     <img className="person-icon-form" src={window.female} alt="" /> :
-                     <img className="person-icon-form" src={window.male} alt="" /> 
-                    }
-                  <p>{user.fname + " " + user.lname}</p>
-                    </Link>
-                  </div>
-                ))}
-                </div>
+                <ProfilePostsContainer
+                  user={this.props.user}
+                  key={this.props.user.id}
+                />
               </div>
             </div>
           </div>
-                </div>
         );
     }
 }
