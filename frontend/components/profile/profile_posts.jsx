@@ -24,7 +24,7 @@ class ProfilePosts extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={this.props.currentUser.user.id == this.props.user.id ? 'pro-around-not-user' : 'pro-around-user'}>
         {this.props.currentUser.user.id == this.props.user.id ? (
           <div className="around-the-form-profile">
             {this.props.currentUser.user.gender === "Female" ? (
