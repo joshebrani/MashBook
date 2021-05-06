@@ -37,13 +37,15 @@ class NavBar extends React.Component {
                 <img src={window.m} alt="" />{" "}
               </Link>
             </div>
-            <img className="search-icon" src={window.port} alt="" />{" "}
-            <input
-              type="text"
-              className="search"
-              id=""
-              placeholder=" ⬅ View My Portfolio (coming soon)"
-            />
+            <a href="https://joshebrani.github.io/" target="_blank">
+              <img className="search-icon" src={window.port} alt="" />{" "}
+              </a>
+              <input
+                type="text"
+                className="search"
+                id=""
+                placeholder=" ⬅ View My Portfolio"
+              />
           </div>
 
           <div className="h-v-g">
@@ -77,7 +79,10 @@ class NavBar extends React.Component {
           </Link>
           <div className="m-b-d">
             <div className="profile-nav"></div>
-            <a href="">
+            <a
+              href="https://joshebrani.github.io/assets/Joshua%20Ebrani%20-%20Resume.pdf"
+              target="_blank"
+            >
               <img className="messages-icon" src={window.resume1} alt="" />{" "}
             </a>
             <a href="https://www.linkedin.com/in/joshuaebrani/" target="_blank">
