@@ -96,8 +96,12 @@ class CreatePostForm extends React.Component {
               placeholder={`What's on your mind, ${this.props.currentUser.fname}?`}
             ></textarea>
 
-            <input type="file" name="" id="" onChange={this.handleFile} />
-            
+            <label className="file-upload-input">
+              <input className= 'file' onChange={this.handleFile} type="file" />
+              {/* <i className="fas fa-image"></i> */}
+            </label>
+            {/* <input type="file" name="" id="" onChange={this.handleFile} />
+            <i className="fas fa-image"></i> */}
             <footer>
               <button onClick={this.handleSubmit} className="post-button">
                 <div className="pee">
