@@ -40,7 +40,7 @@ const PostIndexItem = (props) => (
 
       {/* <p>{props.post.photoUrl ? props.post.photoUrl : null}</p> */}
       {props.post.photoUrl ? 
-      <img src={props.post.photoUrl} alt="" /> :
+      <img className='post-photo' src={props.post.photoUrl} alt="" /> :
       null
     }
       <span className="delete-edit-post">

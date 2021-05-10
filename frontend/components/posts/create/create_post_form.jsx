@@ -94,7 +94,9 @@ class CreatePostForm extends React.Component {
               onChange={this.handleInput("body")}
               placeholder={`What's on your mind, ${this.props.currentUser.fname}?`}
             ></textarea>
+
             <input type="file" name="" id="" onChange={this.handleFile} />
+            
             <footer>
               <button onClick={this.handleSubmit} className="post-button">
                 <div className="pee">
