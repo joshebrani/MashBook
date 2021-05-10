@@ -38,6 +38,11 @@ const PostIndexItem = (props) => (
     <p className="post-body">
       {props.post.body}
 
+      {/* <p>{props.post.photoUrl ? props.post.photoUrl : null}</p> */}
+      {props.post.photoUrl ? 
+      <img src={props.post.photoUrl} alt="" /> :
+      null
+    }
       <span className="delete-edit-post">
         {props.post.post_author_id === props.currentUser.id ? (
           <button
