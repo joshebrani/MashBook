@@ -181,11 +181,9 @@
     left: 1300px;
     top: 150px;
     z-index: 1;
-    // border-top: 1px solid #b1adad;
-    // padding: 20px;
-    overflow-x: visible;
+    overflow-x: hidden;
     overflow-y: scroll;
-    height: 100vh;
+    height: 80%;
     width: 280px;
 }
 
