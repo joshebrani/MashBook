@@ -90,6 +90,10 @@ class ProfilePosts extends React.Component {
                           </button>
                         ) : null}
                       </span> */}
+                      {this.props.posts[post.id].photoUrl ? 
+                      <img className='post-photo' src={this.props.posts[post.id].photoUrl} alt=""/> :
+                      null
+                    }
                     </p>
 
                     <ul className="like-and-comment">

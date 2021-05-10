@@ -36,34 +36,36 @@ const PostIndexItem = (props) => (
       <img className="earth" src={window.earth} alt="" />
     </p>
     <p className="post-body">
-      {props.post.body}
+      <p>
+        {props.post.body}
+        </p>
 
       {/* <p>{props.post.photoUrl ? props.post.photoUrl : null}</p> */}
-      {props.post.photoUrl ? 
-      <img className='post-photo' src={props.post.photoUrl} alt="" /> :
-      null
-    }
-      <span className="delete-edit-post">
-        {props.post.post_author_id === props.currentUser.id ? (
-          <button
-            className="poster-button"
-            onClick={() =>
-              props.destroyPost(props.post.id).then(() => props.getPosts())
-            }
-          >
-            Delete Post
-          </button>
-        ) : null}
-        {props.post.post_author_id === props.currentUser.id ? (
-          <button
-            className="poster-button"
-            onClick={() => props.openModal("Edit Post", props.post.id)}
-          >
-            Edit Post
-          </button>
-        ) : null}
-      </span>
+      {props.post.photoUrl ? (
+        <img className="post-photo" src={props.post.photoUrl} alt="" />
+      ) : null}
     </p>
+
+    <span className="delete-edit-post">
+      {props.post.post_author_id === props.currentUser.id ? (
+        <button
+          className="poster-button"
+          onClick={() =>
+            props.destroyPost(props.post.id).then(() => props.getPosts())
+          }
+        >
+          Delete Post
+        </button>
+      ) : null}
+      {props.post.post_author_id === props.currentUser.id ? (
+        <button
+          className="poster-button"
+          onClick={() => props.openModal("Edit Post", props.post.id)}
+        >
+          Edit Post
+        </button>
+      ) : null}
+    </span>
 
     <ul className="like-and-comment">
       <p>Like</p>
