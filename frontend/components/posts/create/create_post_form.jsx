@@ -104,7 +104,7 @@ class CreatePostForm extends React.Component {
             <i className="fas fa-image"></i> */}
             <footer>
               <button onClick={this.handleSubmit} className="post-button">
-                <div className="pee">
+                <div >
                   <p>Post</p>
                 </div>
               </button>
