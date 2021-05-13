@@ -60,18 +60,39 @@ class Profile extends React.Component {
             <div className="profile-pics-friends">
               <div className="photo-grid">
                 <h1 className="photo-head">Photos</h1>
-                {/* {this.props.user.fname == "Josh" ||
-                this.props.user.fname == "Demo" ? ( */}
-                  <div className="photos">
-                    <img src={window.doge} alt="" />
-                    <img src={window.liu} alt="" />
-                    <img src={window.me} alt="" />
-                    <img src={window.berim} alt="" />
-                    <img src={window.rocks} alt="" />
-                    <img src={window.purim} alt="" />
-                  </div>
-                {/* ) : null} */}
+                <div className="photos">
+                  <img src={window.doge} alt="" />
+                  <img src={window.liu} alt="" />
+                  <img src={window.me} alt="" />
+                  <img src={window.berim} alt="" />
+                  <img src={window.rocks} alt="" />
+                  <img src={window.purim} alt="" />
+                </div>
+               
               </div>
+
+              {/* <div className="photo-grid">
+                <p className="photo-head">Photos</p>
+                {this.props.user.posts.length > 0 ? (
+                  <div>
+                    {Object.values(this.props.user.posts)
+                      .reverse()
+                      .map((post) => (
+                        <div className="photos">
+                          {post && this.props.posts[post.id].photoUrl ? (
+                            <img
+                              className="post-photo"
+                              src={this.props.posts[post.id].photoUrl}
+                              alt=""
+                            />
+                          ) : null}
+                        </div>
+                      ))}
+                  </div>
+                ) : (
+                  <div>No Photos</div>
+                )}
+              </div> */}
 
               <div className="friends-box">
                 <h1 className="photo-head">Users</h1>

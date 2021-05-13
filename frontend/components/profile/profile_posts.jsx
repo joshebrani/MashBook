@@ -17,10 +17,10 @@ class ProfilePosts extends React.Component {
     this.props.openModal("Create Post");
   }
 
-  // handleDelete(id) {
-  //   // e.preventDefault();
-  //   this.props.destroyPost(id).then(() => this.props.getPosts());
-  // }
+  handleDelete(id) {
+    // e.preventDefault();
+    this.props.destroyPost(id).then(() => this.props.getPosts());
+  }
 
   render() {
     return (
@@ -40,6 +40,29 @@ class ProfilePosts extends React.Component {
         ) : (
           <p className="around-the-form-profile-2">{`You will be able to post on ${this.props.user.fname}'s wall soon`}</p>
         )}
+
+        {/* <div className='photo-grid'>
+          {this.props.user.posts.length > 0 ? (
+            <div>
+              {Object.values(this.props.user.posts)
+              .reverse()
+              .map((post) => (
+                <div>
+
+                {this.props.posts[post.id].photoUrl ? 
+                      <img className='post-photo' src={this.props.posts[post.id].photoUrl} alt=""/> :
+                      null
+                    }
+                    </div>
+              ))}
+            </div>
+          ) :
+                <div>
+                  No Photos
+                </div>
+          }
+        </div> */}
+
         <div>
           {this.props.user.posts.length > 0 ? (
             <div className="after-post-profile">
