@@ -10,6 +10,11 @@ class Profile extends React.Component {
     constructor(props) {
         super(props);
 
+        this.generateAlert = this.generateAlert.bind(this)
+    }
+
+    generateAlert(){
+        alert("Functionality Coming Soon");
     }
 
 
@@ -35,22 +40,42 @@ class Profile extends React.Component {
 
                 <div className="under-name">
                   <ul className="about-stuff">
-                    <li>Posts</li>
-                    <li>About</li>
-                    <li>Friends</li>
-                    <li>Photos</li>
-                    <li>More</li>
+                    <li onClick={this.generateAlert}>Posts</li>
+                    <li onClick={this.generateAlert}>About</li>
+                    <li onClick={this.generateAlert}>Friends</li>
+                    <li onClick={this.generateAlert}>Photos</li>
+                    <li onClick={this.generateAlert}>More</li>
                   </ul>
                   <div className="buttons-not-work">
                     {this.props.user.id == this.props.currentUser.user.id ? (
                       <div>
-                        <button className="add-story">Add Story</button>
-                        <button className="edit-profile">Edit Profile</button>
+                        <button
+                          className="add-story"
+                          onClick={this.generateAlert}
+                        >
+                          Add Story
+                        </button>
+                        <button
+                          className="edit-profile"
+                          onClick={this.generateAlert}
+                        >
+                          Edit Profile
+                        </button>
                       </div>
                     ) : (
                       <div>
-                        <button className="add-story">Add Friend</button>
-                        <button className="edit-profile">Message</button>
+                        <button
+                          className="add-story"
+                          onClick={this.generateAlert}
+                        >
+                          Add Friend
+                        </button>
+                        <button
+                          className="edit-profile"
+                          onClick={this.generateAlert}
+                        >
+                          Message
+                        </button>
                       </div>
                     )}
                   </div>
@@ -76,7 +101,7 @@ class Profile extends React.Component {
               <div className="photo-grid">
                 <p className="photo-head">Photos</p>
                 {this.props.user.posts.length > 0 ? (
-                  <div className='photo-motto'>
+                  <div className="photo-motto">
                     {Object.values(this.props.user.posts)
                       .reverse()
                       .map((post) => (
