@@ -216,13 +216,20 @@
 }
 
 .splash-footer {
-     color: gray;
-    display: flex;
-    flex-direction: row;
+    //  color: gray;
+    // display: flex;
+    // flex-direction: row;
+    // background: white;
+    // padding-bottom: 90px;
+    // padding-top: 5px;
+    // padding-left: 10px;
+    color: gray;
+    width: 100%;
     background: white;
-    padding-bottom: 90px;
-    padding-top: 5px;
-    padding-left: 10px;
+    display: flex;
+    padding: 10px 0 100px 5px;
+    position: absolute;
+    bottom: 0px;
 }
 
 .splash-footer p, a {
