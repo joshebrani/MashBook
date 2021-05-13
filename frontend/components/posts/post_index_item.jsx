@@ -36,9 +36,7 @@ const PostIndexItem = (props) => (
       <img className="earth" src={window.earth} alt="" />
     </p>
     <p className="post-body">
-      <p>
-        {props.post.body}
-        </p>
+      <p>{props.post.body}</p>
 
       {/* <p>{props.post.photoUrl ? props.post.photoUrl : null}</p> */}
       {props.post.photoUrl ? (
@@ -51,7 +49,10 @@ const PostIndexItem = (props) => (
         <button
           className="poster-button"
           onClick={() =>
-            props.destroyPost(props.post.id).then(() => props.getPosts())
+            props
+              .destroyPost(props.post.id)
+              .then(() => props.getPosts())
+              .then(() => props.getUsers())
           }
         >
           Delete Post

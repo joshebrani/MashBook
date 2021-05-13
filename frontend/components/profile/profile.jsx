@@ -58,8 +58,10 @@ class Profile extends React.Component {
               </div>
             </div>
             <div className="profile-pics-friends">
-              <div className="photo-grid">
+              {/* <div className="photo-grid">
                 <h1 className="photo-head">Photos</h1>
+                {this.props.user.fname == "Josh" ||
+                this.props.user.fname == "Demo" ? (
                 <div className="photos">
                   <img src={window.doge} alt="" />
                   <img src={window.liu} alt="" />
@@ -68,13 +70,13 @@ class Profile extends React.Component {
                   <img src={window.rocks} alt="" />
                   <img src={window.purim} alt="" />
                 </div>
-               
-              </div>
+               ) : null} 
+              </div> */}
 
-              {/* <div className="photo-grid">
+              <div className="photo-grid">
                 <p className="photo-head">Photos</p>
                 {this.props.user.posts.length > 0 ? (
-                  <div>
+                  <div className='photo-motto'>
                     {Object.values(this.props.user.posts)
                       .reverse()
                       .map((post) => (
@@ -92,7 +94,7 @@ class Profile extends React.Component {
                 ) : (
                   <div>No Photos</div>
                 )}
-              </div> */}
+              </div>
 
               <div className="friends-box">
                 <h1 className="photo-head">Users</h1>

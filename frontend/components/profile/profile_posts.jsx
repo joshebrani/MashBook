@@ -17,10 +17,13 @@ class ProfilePosts extends React.Component {
     this.props.openModal("Create Post");
   }
 
-  handleDelete(id) {
-    // e.preventDefault();
-    this.props.destroyPost(id).then(() => this.props.getPosts());
-  }
+  // handleDelete(id) {
+  //   // e.preventDefault();
+  //   this.props
+  //     .destroyPost(id)
+  //     .then(() => this.props.getPosts())
+  //     .then(() => this.props.getUsers());
+  // }
 
   render() {
     return (
