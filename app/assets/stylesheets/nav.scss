@@ -182,7 +182,27 @@
     padding-right: 5px;
 }
 
+.flex-small {
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    align-items: center;
+    /* width: 100px; */
+    /* margin-right: 0px; */
+    height: 47px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-right: 80px;
+}
+
 .flex-profile:hover {
+    cursor: pointer;
+    background: #dcdada;
+    color: #1972d8;
+    border-radius: 6px;
+}
+
+.flex-small:hover {
     cursor: pointer;
     background: #dcdada;
     color: #1972d8;

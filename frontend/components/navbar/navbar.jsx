@@ -67,7 +67,7 @@ class NavBar extends React.Component {
           </div>
 
           <Link
-            className="flex-profile"
+            className={window.innerWidth > 1412 ? "flex-profile" : "flex-small"}
             to={`/users/${this.props.currentUser.user.id}`}
           >
             {this.props.currentUser.user.gender === "Female" ? (
@@ -77,7 +77,7 @@ class NavBar extends React.Component {
             )}
             <p>{this.props.currentUser.user.fname}</p>
           </Link>
-          <div className="m-b-d">
+          <div className={window.innerWidth > 1412 ? "m-b-d" : "none"}>
             <div className="profile-nav"></div>
             <a
               href="https://joshebrani.github.io/assets/Joshua%20Ebrani%20-%20Resume.pdf"
