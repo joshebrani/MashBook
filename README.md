@@ -13,6 +13,7 @@
 * JavaScript
 * React
 * Redux
+* Amazon Web Services (AWS)
 * PostgreSQL
 * Webpack
 * Heroku
@@ -24,9 +25,19 @@
 
 ## Brief Overview
 
-MashBook, hosted on heroku, uses Ruby on Rails as its backend API, PostgreSQL for it's database, React and Redux to manage rendering its frontend, jbuilder to send content from the backend to frontend, and CSS for the styling.
+MashBook, hosted on heroku, uses Ruby on Rails as its backend API, PostgreSQL for it's database, React and Redux to manage rendering its frontend, Amazon Web Services (AWS) to post pictures, jbuilder to send content from the backend to frontend, and CSS for the styling.
 
+## Core Features
 
+* Create Profiles
+* Log in
+* Log out
+* Create Posts (with pictures)
+* Edit Posts
+* Delete Posts
+* Comment on Posts
+* Delete Comments
+* View user profiles
 
 ![Screen Shot 2021-05-06 at 3.59.55 PM[image]](https://user-images.githubusercontent.com/75503365/117358452-2a170580-ae84-11eb-8813-843ed830dcfa.png)
 <!-- MashBook, like many other social media applications, allows users to create profiles, posts, and comments.
