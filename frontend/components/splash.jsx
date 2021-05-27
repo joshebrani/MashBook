@@ -17,7 +17,7 @@ class Splash extends React.Component {
               <LoginFormContainer />
               {/* <SignupFormContainer/> */}
             </header>
-            <footer className="splash-footer">
+            <footer className={window.innerHeight > 680 ? "splash-footer" : 'short'}>
               <p>Facebook Clone by Joshua Ebrani ©</p>
               <a
                 href="https://www.linkedin.com/in/joshuaebrani/"

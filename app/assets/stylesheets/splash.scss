@@ -232,6 +232,20 @@
     bottom: 0px;
 }
 
+.short {
+    color: gray;
+    width: 100%;
+    background: white;
+    display: flex;
+    padding: 10px 0 100px 5px;
+    position: absolute;
+    // bottom: 0px; 
+}
+
+.short p, a {
+    margin-right: 20px;
+}
+
 .splash-footer p, a {
     margin-right: 20px;
 }
