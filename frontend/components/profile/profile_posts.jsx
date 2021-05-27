@@ -27,7 +27,12 @@ class ProfilePosts extends React.Component {
 
   render() {
     return (
-      <div className={this.props.currentUser.user.id == this.props.user.id ? 'pro-around-user' : 'pro-around-not-user'}>
+      // <div className={this.props.currentUser.user.id == this.props.user.id ? 'pro-around-user' : 'pro-around-not-user'}>
+      <div
+        className={
+          this.props.user.posts ? "pro-around-not-user" : "pro-around-user"
+        }
+      >
         {this.props.currentUser.user.id == this.props.user.id ? (
           <div className="around-the-form-profile">
             {this.props.currentUser.user.gender === "Female" ? (
@@ -116,10 +121,13 @@ class ProfilePosts extends React.Component {
                           </button>
                         ) : null}
                       </span> */}
-                      {this.props.posts[post.id].photoUrl ? 
-                      <img className='post-photo' src={this.props.posts[post.id].photoUrl} alt=""/> :
-                      null
-                    }
+                      {this.props.posts[post.id].photoUrl ? (
+                        <img
+                          className="post-photo"
+                          src={this.props.posts[post.id].photoUrl}
+                          alt=""
+                        />
+                      ) : null}
                     </p>
 
                     <ul className="like-and-comment">
@@ -131,7 +139,7 @@ class ProfilePosts extends React.Component {
                 ))}
             </div>
           ) : (
-            "No Posts Yet"
+            <div className='no-posts'>No Posts Yet</div>
           )}
         </div>
       </div>

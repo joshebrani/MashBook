@@ -231,10 +231,18 @@ body {
 
 .pro-around-user {
     position: relative;
-    bottom: 320px;
+    bottom: 300px;
 }
 
 .pro-around-not-user {
     position: relative;
-    bottom: 520px;
+    bottom: 615px;
 }
+
+.no-posts {
+    position: relative;
+    left: 65%;
+    bottom: 800px;
+    font-weight: bold;
+}
+

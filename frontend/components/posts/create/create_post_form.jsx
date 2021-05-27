@@ -64,7 +64,7 @@ class CreatePostForm extends React.Component {
         if (file) {
           fileReader.readAsDataURL(file);
         }
-  }
+      }
 
   render() {
     return (
