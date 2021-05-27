@@ -391,8 +391,8 @@ display: flex;
   height: 0;
   margin: 8px;
   box-sizing: border-box;
-  border: 32px solid #fff;
-  border-color: #fff transparent #fff transparent;
+  border: 32px solid rgb(1, 47, 252);
+  border-color: rgb(0, 26, 255) transparent rgb(0, 26, 255) transparent;
   animation: lds-hourglass 1.2s infinite;
 }
 @keyframes lds-hourglass {
