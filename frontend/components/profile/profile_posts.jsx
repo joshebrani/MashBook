@@ -30,7 +30,7 @@ class ProfilePosts extends React.Component {
       // <div className={this.props.currentUser.user.id == this.props.user.id ? 'pro-around-user' : 'pro-around-not-user'}>
       <div
         className={
-          this.props.user.posts ? "pro-around-not-user" : "pro-around-user"
+          this.props.user.posts.length > 0 ? "pro-around-not-user" : "pro-around-user"
         }
       >
         {this.props.currentUser.user.id == this.props.user.id ? (
