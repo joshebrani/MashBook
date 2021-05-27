@@ -38,7 +38,7 @@ class NewsFeed extends React.Component {
             <p>{`What's on your mind, ${this.props.currentUser.user.fname}?`}</p>
           </div>
         </div>
-        <div className = {window.innerWidth > 1350 ? 'contacts' : 'none'}>
+        <div className = {window.innerWidth > 1240 ? 'contacts' : 'none'}>
             <UserSidebarContainer/>
         </div>
 
