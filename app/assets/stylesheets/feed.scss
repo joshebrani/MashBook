@@ -176,7 +176,23 @@
     margin-left: 5px;
 }
 
+// .contacts {
+//     position: fixed;
+//     left: 84%;
+//     top: 150px;
+//     z-index: 1;
+//     overflow-x: hidden;
+//     overflow-y: scroll;
+//     height: 80%;
+//     width: 280px;
+// }
+
 .contacts {
+ 
+  @media (max-width: 1240px) {
+    display: none;
+  }
+  @media (min-width: 1241px) {
     position: fixed;
     left: 84%;
     top: 150px;
@@ -185,6 +201,7 @@
     overflow-y: scroll;
     height: 80%;
     width: 280px;
+  }
 }
 
 .none {
