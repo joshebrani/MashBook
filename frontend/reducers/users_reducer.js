@@ -1,5 +1,6 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import { RECEIVE_ALL_USERS, RECEIVE_USER, REMOVE_USER } from '../actions/user_actions';
+import { REMOVE_POST } from '../actions/post_actions';
 
 
 const usersReducer = (state = {}, action) => {

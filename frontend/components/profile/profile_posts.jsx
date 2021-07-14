@@ -17,13 +17,13 @@ class ProfilePosts extends React.Component {
     this.props.openModal("Create Post");
   }
 
-  // handleDelete(id) {
-  //   // e.preventDefault();
-  //   this.props
-  //     .destroyPost(id)
-  //     .then(() => this.props.getPosts())
-  //     .then(() => this.props.getUsers());
-  // }
+  handleDelete(id) {
+    // e.preventDefault();
+    this.props
+      .destroyPost(id)
+      .then(() => this.props.getPosts())
+      .then(() => this.props.getUsers());
+  }
 
   render() {
     return (
@@ -99,7 +99,7 @@ class ProfilePosts extends React.Component {
                     <p className="time-post">{findDate(post.created_at)}</p>
                     <p className="post-body">
                       {post.body}
-                      {/* <span className="delete-edit-post">
+                      <span className="delete-edit-post">
                         {post.post_author_id ===
                         this.props.currentUser.user.id ? (
                           <button
@@ -109,7 +109,7 @@ class ProfilePosts extends React.Component {
                             Delete Post
                           </button>
                         ) : null}
-                        {post.post_author_id ===
+                        {/* {post.post_author_id ===
                         this.props.currentUser.user.id ? (
                           <button
                             className="poster-button"
@@ -119,9 +119,9 @@ class ProfilePosts extends React.Component {
                           >
                             Edit Post
                           </button>
-                        ) : null}
-                      </span> */}
-                      {this.props.posts[post.id].photoUrl ? (
+                        ) : null} */}
+                      </span>
+                      {this.props.posts[post.id] && this.props.posts[post.id].photoUrl ? (
                         <img
                           className="post-photo"
                           src={this.props.posts[post.id].photoUrl}

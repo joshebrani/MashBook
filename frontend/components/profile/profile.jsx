@@ -106,7 +106,7 @@ class Profile extends React.Component {
                       .reverse()
                       .map((post) => (
                         <div className="photos">
-                          {post && this.props.posts[post.id].photoUrl ? (
+                          {post && this.props.posts[post.id] && this.props.posts[post.id].photoUrl ? (
                             <img
                               className="post-photo"
                               src={this.props.posts[post.id].photoUrl}
