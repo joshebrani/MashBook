@@ -68,7 +68,7 @@ class NavBar extends React.Component {
 
           <Link
             // className={window.innerWidth > 1412 ? "flex-profile" : "flex-small"}
-            className='flex-profile'
+            className="flex-profile"
             to={`/users/${this.props.currentUser.user.id}`}
           >
             {this.props.currentUser.user.gender === "Female" ? (
@@ -79,10 +79,10 @@ class NavBar extends React.Component {
             <p>{this.props.currentUser.user.fname}</p>
           </Link>
           {/* <div className={window.innerWidth > 1412 ? "m-b-d" : "none"}> */}
-          <div className='m-b-d'>
+          <div className="m-b-d">
             <div className="profile-nav"></div>
             <a
-              href="https://joshebrani.github.io/assets/Joshua%20Ebrani%20-%20Resume.pdf"
+              href="https://joshebrani.github.io/assets/My%20Resume.pdf"
               target="_blank"
             >
               <img className="messages-icon" src={window.resume1} alt="" />{" "}
